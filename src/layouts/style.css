@@ -1,0 +1,26 @@
+* {
+  font-family: Inter;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+  .arrow {
+    display: block !important;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  #menu {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {}

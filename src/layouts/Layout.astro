@@ -1,0 +1,48 @@
+---
+export interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+import {PrimaryColor,secondaryColor} from '../config/colors'
+import Border from '/border.svg'
+import Menu from '../components/Menu/Menu.jsx'
+import './style.css'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="container" >
+			<img src={Border} alt="" style="width: 200px; display:none" class="arrow">
+			<slot />
+		<div id="menu">
+			<Menu />
+		</div>
+			<img src={Border} alt="" style="width: 200px;transform: rotate(180deg); float:right; display:none" class="arrow">
+
+		</div>
+	</body>
+</html>
+<style is:global define:vars={{ PrimaryColor, secondaryColor }}>
+
+	body {
+		background: var(--PrimaryColor);
+		min-height: 100vh;
+		height: 100%;
+	}
+	h1{
+    color: var(--secondaryColor);
+	
+
+}p{
+    color: var(--secondaryColor);
+}
+
+</style>

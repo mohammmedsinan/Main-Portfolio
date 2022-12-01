@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/logo'
+import './home.css'
+---
+
+<Layout title="Mohammed Sinan">
+    <div id="container">
+        <div class="sub-container">
+            <h1 id="name" style="display: flex;">Mohammed Sinan</h1>
+        <div class="hr mobile">
+            <hr />
+        </div>
+            <p id="discrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <div class="desktop btn-sub-container" style="display: flex;">
+                <button class="btn" id="btn1">Portfolio</button>
+                <button class="btn" id="btn2">Contact</button>
+            </div>
+        </div>
+        <div class="logos mobile" style="display:none">
+            <Logo />
+        </div>
+        <div class="desktop vr"></div>
+        <div id="discrip2">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis </p>
+        <div class="desktop">
+            <Logo />
+        </div>      
+        </div>
+        <div class="btn-container mobile" style="display: none;">
+            <button class="btn" id="btn1">Portfolio</button>
+            <button class="btn" id="btn2">Contact</button>
+        </div>
+    </div>
+</Layout>
+
+<style>
+
+</style>
