@@ -4,8 +4,8 @@ export interface Props {
 }
 const { title } = Astro.props;
 import {PrimaryColor,secondaryColor} from '../config/colors'
-import Border from '/border.svg'
 import Menu from '../components/Menu/Menu.jsx'
+import {Icon} from 'astro-icon'
 import './style.css'
 ---
 
@@ -20,13 +20,13 @@ import './style.css'
 	</head>
 	<body>
 		<div class="container" >
-			<img src={Border} alt="" style="width: 200px; display:none" class="arrow">
+			<Icon name="border" class="border b1"/>
 			<slot />
 		<div id="menu">
 			<Menu />
 		</div>
-			<img src={Border} alt="" style="width: 200px;transform: rotate(180deg); float:right; display:none" class="arrow">
-
+		<Icon name="border" class="border b2"/>
+			
 		</div>
 	</body>
 </html>

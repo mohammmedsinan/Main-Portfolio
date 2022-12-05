@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+.border {
+  width: 12%;
+  min-width: 100px;
+}
+
+.border path {
+  stroke: var(--secondaryColor);
+
+}
+
+.b2 {
+  transform: rotate(180deg);
+  float: right;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {}

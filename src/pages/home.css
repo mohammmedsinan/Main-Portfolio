@@ -8,8 +8,9 @@
 }
 
 #btn1 {
-  border: 3px solid var(--secondaryColor);
+  border: 3px solid var(--PrimaryColor);
   color: var(--PrimaryColor);
+  background-color: var(--secondaryColor);
   transition: all ease 0.3s;
 }
 
@@ -60,7 +61,7 @@
   }
 
   hr {
-    border-top: 2px solid white;
+    border-top: 2px solid var(--secondaryColor);
 
     width: 200px;
   }
@@ -136,7 +137,7 @@
   .vr {
     width: 2px;
     height: 300px;
-    background-color: white;
+    background-color: var(--secondaryColor);
     margin: 0px 20px;
     border-radius: 100px;
   }

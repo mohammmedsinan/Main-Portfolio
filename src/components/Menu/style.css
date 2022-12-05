@@ -19,7 +19,7 @@
 .circle:hover {
   box-shadow: none;
   transform: scale(1.2) translateY(-20px);
-  box-shadow: #8377c9 0px 0px 15px 0px;
+  box-shadow: var(--secondaryColor) 0px 0px 15px 0px;
 }
 
 .circle-clicked {
@@ -32,9 +32,14 @@ a {
   text-decoration: none;
 }
 
-.logoTransition {
+svg.logoTranstion {
   transition: all ease 0.2s;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  width: 20%;
+  margin-top: 10px;
 }
+
 
 #logo1:hover {
 
