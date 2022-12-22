@@ -12,7 +12,7 @@
   align-items: center;
   margin: 0px 10px;
   cursor: pointer;
-  box-shadow: black 0px 0px 10px 0px;
+  box-shadow: var(--secondaryColor) 0px 0px 5px 1px;
   transition: all ease 0.2s;
 }
 

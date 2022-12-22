@@ -1,0 +1,96 @@
+.Slider-Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 15px;
+  background-color: var(--secondaryColor);
+  border-radius: 20px;
+  padding: 16px 0px;
+  box-shadow: var(--secondaryColor) 0px 0px 5px 1px;
+  position: absolute;
+  transition: all ease 0.8s;
+  opacity: 0;
+  max-width: 600px;
+
+}
+
+.Slider-Description {
+  margin: 30px 0px;
+  color: var(--PrimaryColor);
+  max-width: 90%;
+}
+
+.Slider-Title {
+  color: var(--PrimaryColor);
+}
+
+.btn-collection {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.btn-collection button {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-collection button:last-child {
+  color: var(--secondaryColor);
+  background-color: var(--PrimaryColor);
+  border: 2px solid var(--secondaryColor);
+  transition: all ease 0.3s;
+}
+
+.btn-collection button:not(last-child) {
+  border: 2px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+  background-color: var(--secondaryColor);
+  transition: all ease 0.3s;
+}
+
+
+.default-slider {
+  opacity: 1;
+}
+
+.right {
+  transform: translateX(500px);
+}
+
+.left {
+  transform: translateX(-500px);
+}
+
+.popup {
+  opacity: 1;
+}
+
+/* .Slider-Helper {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+} */
+@media (min-width: 992px) {
+  .Slider-Helper {
+    align-items: center;
+  }
+
+  @media (min-width: 670px) {}
+}
+
+.Slider-Helper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
