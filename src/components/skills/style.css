@@ -23,6 +23,19 @@
   height: 100px;
   margin: 10px;
   border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.skills-icons {
+  color: #fcedda;
+  max-width: 70px;
+}
+
+/*==============================================================================*/
+#react {
+  color: #fcedda;
 }
 
 @media (max-width: 576px) {
@@ -31,8 +44,12 @@
   }
 
   .small-card {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .skills-icons {
+    max-width: 40px;
   }
 }
 

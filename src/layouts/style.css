@@ -21,7 +21,15 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 576px) {}
+@media (max-width: 576px) {
+  .b1 {
+    margin-bottom: 50px;
+  }
+
+  .b2 {
+    margin-top: 50px;
+  }
+}
 
 @media (min-width: 768px) {}
 
