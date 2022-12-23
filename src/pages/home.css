@@ -1,14 +1,14 @@
 .btn {
   padding: 13px 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
 
 #btn1 {
-  border: 3px solid var(--PrimaryColor);
+  border: 3px solid var(--secondaryColor);
   color: var(--PrimaryColor);
   background-color: var(--secondaryColor);
   transition: all ease 0.3s;
