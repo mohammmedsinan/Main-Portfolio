@@ -15,6 +15,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   border-radius: 20px;
+  z-index: 4;
 }
 
 .small-card {
@@ -29,15 +30,61 @@
 }
 
 .skills-icons {
-  color: #fcedda;
+  color: var(--secondaryColor);
   max-width: 70px;
 }
 
-/*==============================================================================*/
-#react {
-  color: #fcedda;
+#dialog-box {
+  color: var(--PrimaryColor);
+  position: absolute;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.hide {
+  opacity: 0;
+}
+
+.appear {
+  opacity: 1;
+}
+
+.subCh {
+  width: 100px;
+  height: 80px;
+  background-color: var(--PrimaryColor);
+  border-radius: 20px;
+  position: relative;
+  box-shadow: var(--secondaryColor) 1px 1px 12px;
+}
+
+.subCh::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  top: 40px;
+  left: 20px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid transparent;
+  border-left: 60px var(--PrimaryColor) solid;
+  border-bottom: 30px solid transparent;
+  transform: rotate(90deg);
+}
+
+.dialog-text {
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  display: block;
+  z-index: 9;
+  font-size: 18px;
+}
+
+/*==============================================================================*/
 @media (max-width: 576px) {
   #skills-container-helper {
     max-width: 400px;
