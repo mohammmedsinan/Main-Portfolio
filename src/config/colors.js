@@ -1,6 +1,6 @@
 export let PrimaryColor;
 export let secondaryColor;
-const Randomizer = 1;
+const Randomizer = 2;
 
 if (Randomizer === 0) {
   PrimaryColor = '#234E70';
