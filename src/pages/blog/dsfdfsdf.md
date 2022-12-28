@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/post.astro
+layout: ../../layouts/Layout.astro
 title: dsfdfsdf
 description: fsdfsdfsdf
 tags:
