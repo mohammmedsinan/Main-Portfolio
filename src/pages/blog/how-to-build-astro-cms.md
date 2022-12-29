@@ -3,6 +3,7 @@ layout: ../../layouts/blogLayout.astro
 title: How to build astro with CMS
 urlTitle: how-to-build-astro-cms
 date: 2022-12-28T10:35:22.536Z
+author: Mohammed Sinan
 ---
 
 # **_A﻿stro_**
