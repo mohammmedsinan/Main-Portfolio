@@ -11,6 +11,7 @@ const posts = await Astro.glob('./*.md');
         <div id="wrapper">
             {posts.map(MDfile => {
                 return(
+                    <a href={`https://mohammed-sinan.netlify.app${MDfile.url}`}>
                 <div class="blog-card">
                 <div class="card-header">
                     <div class="blog-avatar">{MDfile.frontmatter.avatar&& <img src={MDfile.frontmatter.avatar} alt="MDfile.frontmatter.avatar"/>}</div>
@@ -23,6 +24,7 @@ const posts = await Astro.glob('./*.md');
                     <div class="author"><span class="strong">Author</span> : {MDfile?.frontmatter.author}</div>
                 </div>
             </div>
+        </a>
                 )
             })}
             <div class="blog-card">
