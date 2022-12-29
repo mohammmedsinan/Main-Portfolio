@@ -3,7 +3,6 @@ import Layout from "../../layouts/Layout.astro";
 import './style.css'
 import '../home.css'
 const posts = await Astro.glob('./*.md');
-posts?.map(e => console.log(e.frontmatter.avatar))
 ---
 
 
@@ -18,7 +17,7 @@ posts?.map(e => console.log(e.frontmatter.avatar))
                     <div class="hr"></div>
                     <div class="blog-title">{MDfile.frontmatter.title}</div>
                 </div>
-                <div class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+                <div class="blog-description">{MDfile.frontmatter.summary}</div>
                 <div class="blog-info">
                     <div class="created-at"><span class="strong">Date</span> : {MDfile?.frontmatter.date}</div>
                     <div class="author"><span class="strong">Author</span> : {MDfile?.frontmatter.author}</div>

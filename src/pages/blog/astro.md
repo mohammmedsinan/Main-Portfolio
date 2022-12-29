@@ -8,6 +8,11 @@ author: Mohammed sinan
 authorTwitter: Mohammed
 date: 2022-12-28T13:04:42.562Z
 avatar: /assets/avatar.jpeg
+summary: >-
+  React in this Blog we will talk about React and redux and how to inject
+  reducers inside redux store 
+
+  when you are using react and redux toolkit
 ---
 
 # **_A﻿stro_**
