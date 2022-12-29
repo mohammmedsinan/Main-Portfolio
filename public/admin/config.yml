@@ -3,7 +3,7 @@ backend:
   branch: Cms-v1
 
 media_folder: 'public/assets' # Folder where user uploaded files should go
-public_folder: '/images/uploads'
+public_folder: ' /assets'
 
 collections: # A list of collections the CMS should be able to edit
   - name: 'post' # Used in routes, ie.: /admin/collections/:slug/edit

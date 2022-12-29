@@ -8,8 +8,9 @@ summary: >-
   reducers inside redux store 
 
   when you are using react and redux toolkit
-avatar: /images/uploads/img3.jpg
+avatar: /assets/avatar.jpeg
 author: Mohammed sinan
 date: 2022-12-29T11:18:57.329Z
 ---
+
 s﻿dfjskdl;f;sldkjf;lskdajf;lskdjflksdjfl;ksafdsa

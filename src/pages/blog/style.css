@@ -40,9 +40,14 @@
   height: 30px;
   background-color: var(--PrimaryColor);
   border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-
+.avatar-img {
+  flex-grow: 1;
+}
 
 #wrapper {
   display: flex;

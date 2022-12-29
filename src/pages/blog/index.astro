@@ -3,8 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import './style.css'
 import '../home.css'
 const posts = await Astro.glob('./*.md');
-posts?.map(e => console.log(e.frontmatter))
-posts?.map(e => console.log(e.url))
+posts?.map(e => console.log(e.frontmatter.avatar))
 ---
 
 
@@ -15,7 +14,7 @@ posts?.map(e => console.log(e.url))
                 return(
                 <div class="blog-card">
                 <div class="card-header">
-                    <div class="blog-avatar"></div>
+                    <div class="blog-avatar">{MDfile.frontmatter.avatar&& <img src={MDfile.frontmatter.avatar} alt="MDfile.frontmatter.avatar"/>}</div>
                     <div class="hr"></div>
                     <div class="blog-title">{MDfile.frontmatter.title}</div>
                 </div>

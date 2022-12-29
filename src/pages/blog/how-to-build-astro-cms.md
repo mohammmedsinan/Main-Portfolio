@@ -4,6 +4,7 @@ title: How to build astro with CMS
 urlTitle: how-to-build-astro-cms
 date: 2022-12-28T10:35:22.536Z
 author: Mohammed Sinan
+avatar: /assets/avatar.jpeg
 ---
 
 # **_A﻿stro_**
