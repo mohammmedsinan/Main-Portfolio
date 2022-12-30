@@ -3,7 +3,11 @@ import {PrimaryColor,secondaryColor} from "../config/colors"
 import './blog.css'
 import img from '/assets/img.jpg'
 const {frontmatter:{
-    title
+    title ,
+    tag , 
+    author,
+    date,
+    description
 }} = Astro.props;
 ---
 
@@ -20,8 +24,21 @@ const {frontmatter:{
 <div id="blog-container">
     <div id="blog-wrapper">
         <img src={img} alt="Hero" id="img" width="100%" height="100%">
-        <h1 id="blog-title">{title}</h1>
-        <div >
+        <div id="blog-header">
+            <h1 id="blog-title">{title}</h1>
+        <div id="tags-container">
+            {tag.map((element:String) => <span class="tags"> - #{element}</span>)}
+        </div>
+        </div>
+        <div id="vr-blog"></div>
+        <div id="blog-sub-header">
+            <div id="blog-give-info">
+                <p><strong>Created-By</strong> : {author}</p>
+                <p><strong>Created-At</strong> : {date}</p>
+            </div>
+            <p id="blog-description"><strong>Description</strong> : {description}</p>
+        </div>
+        <div id="blog-content-container">
             <slot />
         </div>
     </div>

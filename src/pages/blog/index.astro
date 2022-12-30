@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import './style.css'
 import '../home.css'
 const posts = await Astro.glob('./*.md');
+posts.map(e => e.frontmatter.tag&&console.log(e.frontmatter.tag[4]))
 ---
 
 

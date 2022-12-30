@@ -10,6 +10,11 @@ summary: >-
   reducers inside redux store 
 
   when you are using react and redux toolkit
+tag:
+  - React
+  - Redux
+  - Next
+  - Vite
 ---
 
 # **_A﻿stro_**
