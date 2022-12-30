@@ -13,6 +13,7 @@
   max-width: 600px;
   margin: 20px 50px;
   cursor: pointer;
+  min-width: 40vw;
 }
 
 .card-header {
@@ -94,12 +95,15 @@
   }
 
   .blog-card {
-    max-width: 100%;
     margin: 20px 0px;
   }
 }
 
-@media (min-width: 768px) {}
+@media (max-width: 768px) {
+  .blog-card {
+    width: 90vw;
+  }
+}
 
 @media (min-width: 992px) {}
 

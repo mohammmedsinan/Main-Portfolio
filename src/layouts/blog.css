@@ -41,7 +41,7 @@
 #blog-content-container {
   color: var(--PrimaryColor);
   background-color: var(--secondaryColor);
-  padding: 10px 20px;
+  padding: 20px 30px;
   border-radius: 20px;
   margin: 20px 0px;
 }
@@ -84,6 +84,15 @@
   background-color: var(--PrimaryColor);
   min-height: 100vh;
   padding: 20px 0px;
+}
+
+#blog-container pre {
+  padding: 15px;
+  border-radius: 20px;
+}
+
+#blog-container h1 {
+  margin: 15px 0px;
 }
 
 @media (max-width: 576px) {}
