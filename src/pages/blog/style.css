@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.blog-title {
+.blog-title-outside {
   color: var(--PrimaryColor);
   font-weight: bold;
 }
@@ -56,7 +56,7 @@
   flex-wrap: wrap;
 }
 
-.blog-title {
+.blog-title-outside {
   font-size: 22px;
 }
 

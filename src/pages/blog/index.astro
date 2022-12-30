@@ -7,7 +7,7 @@ const posts = await Astro.glob('./*.md');
 
 
 <Layout title="Blog">
-    <div id="blog-container">
+    <div id="blog-container-outside">
         <div id="wrapper">
             {posts.map(MDfile => {
                 return(
@@ -16,7 +16,7 @@ const posts = await Astro.glob('./*.md');
                 <div class="card-header">
                     <div class="blog-avatar">{MDfile.frontmatter.avatar&& <img src={MDfile.frontmatter.avatar} alt="MDfile.frontmatter.avatar"/>}</div>
                     <div class="hr"></div>
-                    <div class="blog-title">{MDfile.frontmatter.title}</div>
+                    <div class="blog-title-outside">{MDfile.frontmatter.title}</div>
                 </div>
                 <div class="blog-description">{MDfile.frontmatter.summary}</div>
                 <div class="blog-info">
