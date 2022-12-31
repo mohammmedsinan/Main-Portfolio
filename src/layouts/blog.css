@@ -96,6 +96,10 @@
   margin: 15px 0px;
 }
 
+#content-wrapper {
+  max-width: 90vw;
+}
+
 @media (max-width: 576px) {}
 
 @media (min-width: 768px) {}
