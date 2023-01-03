@@ -85,7 +85,22 @@
     align-items: center;
   }
 
-  @media (min-width: 670px) {}
+}
+@media (max-width: 670px) {
+  .Slider-Card{
+    max-height: 240px;
+  }
+  .Slider-Description{
+    font-size: 12px;
+    margin: 2px 0px;
+  }
+  .btn-collection button{
+    padding: 8px 25px;
+    font-size: 10px;
+  }
+  .portfolio-container{
+    min-height: 270px !important;
+  }
 }
 
 .Slider-Helper {
