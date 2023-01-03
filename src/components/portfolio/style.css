@@ -80,6 +80,12 @@
   align-items: center;
   margin-top: 50px;
 } */
+.Slider-Helper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
 @media (min-width: 992px) {
   .Slider-Helper {
     align-items: center;
@@ -91,8 +97,8 @@
     max-height: 240px;
   }
   .Slider-Description{
-    font-size: 12px;
-    margin: 2px 0px;
+    font-size: 10px;
+    margin: 5px 0px;
   }
   .btn-collection button{
     padding: 8px 25px;
@@ -101,11 +107,4 @@
   .portfolio-container{
     min-height: 270px !important;
   }
-}
-
-.Slider-Helper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 }
