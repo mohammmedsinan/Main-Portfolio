@@ -63,7 +63,12 @@
 
 .blog-description {
   color: var(--PrimaryColor);
-  margin: 20px 0px;
+  margin: 15px 0px;
+  padding-top: 10px;
+  border-top: 2px solid var(--PrimaryColor);
+  border-bottom: 2px solid var(--PrimaryColor);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .strong {
