@@ -48,7 +48,8 @@ First of all this stack is the most wanted stack in the industries and if you ha
    ![img-6](https://lh3.googleusercontent.com/fife/AAbDypB3O9qdTAC2hayC6rtab8_eJ0NveVznFSnmNRYxsgpje9FWlR_uCRV9UVz-IftoDypbs56OXWWYrH5SOvMukik78EepTblcQFVW_Vg1AEyCWfBEIDBRWnpWUdxlZEm0inwb1HjT6jpS4OP78gsFXOuEMAfj5-0qypaDwUWIYLWdEsqLCTazAte6mg7G6Jzz1M5P-cGjMEl5twP3AQa4GbKK_UtpDrXz7xWFZy9GdmbHqzbRU_Z7JoijujGpAvpFFYmJRjOjCqw154Mu9OWVWFqJXV5ubrQCdnXzvq0B-Xr0usrg6UpeldIJZt9ye12BH_sioyXotYoT3TudrLGZlfVqg0IazI9pvmlRHEpE3iD802eK6EQowxyrRDkGidvueUC0cvYvIPQTgQaVMyU7wzo6XNCtLOV1j6Xcu8C85bFLZjFLpsLBIHo8j-i5Ii33qZEwaxU5guwkKq1htX3fFi09ms93OqaK5VjIZT7YXjMrxrlNLm3PsZB-OwvSMMgibApJWftL2so18Gz_BIv5tdD4mzGbLxmGRA1_Z7IFnSqeQJ4K63yUaWdS6NFs3OY1LZH6mX8Mo23WQ25CJgJop0uTxGdgH5BXcV9CUyoNCi2VYAvCJoizo52LMehLWnwnWhWZB6lSYNdheeNROvbjcn2xxiJ7PQSbqZ37kgnPPX3Nkx6Uu0NxP8mKAR2P3p7cU6FydH_xT2k95qixKI6pBYAHMzuEJhSYqlOmKYQNuLd1vpvn7QeAwj08mG0Yl4xF61KChmrwIsXWvLM7_UN8p38foLePJf-Z_qGqPaa97hQgbjc21TKB1Enn2cwngov9zlAo-lb_xj5h3S7dmPFdCpn-iWERfJnaN45AkNBn-N71P4afXl5KVxIPSFGr3bVRo3JldWl5zuo7VFtw5KL14rcoI_JEXzpd6_R5uZpfeeIsVfk4-2xJlXWU_UYQqGC-QT5tq0YaeWk5L5Fz_2L9c971eB65kgs-x0gde5Yj3JwyB8oWeGJryuOulnS5DZrgmnX2eyCadj9uHgWopuWZhPKC2oUB8d0B8PWB0VgYyJEGCenvGbTkMvSk320E5-1mom_8LxoJ2W_CkgCZ0FGIPa-Q98t0NWAsLOWqSGeuEygOYp9SCHy08AKPfufdBXLnc268xINMkAEid-c7OE0rShiuuS1pIAtJGaWwc8ge8_8SyZTrHq9j4313-8CKlAbYHyf0odYN5OaMK9hbAoDx85oB5KeE2ThMkO_dGqJI96KMRXvk2ojGVCb3tE5hZMD13DCFXwzXezUT84OPI2h4znpAqiTYSV89W_nBkCqLpt9bxBaWgoTyejcAmhtiFdJ6r30ZawnZMV2ivjiiaZPvzcDFWLsF47kB4dipQLlu6Z1KeRjYHD-vIVCN-UiVZZ5Zpi4BB4tD1QkxJlmxiNynN58azewFAGZwEwUUcaLigFHQigShqCqvq7SCX6fLO-q_Ozz6Fv-YJegD-hQFsCuiqw0NSVFV2PlNCtinOAQpBibc1bXKQykPrF82zFED2X7FND0kbxQOvUy1jzn87bk74WXTqjVdClbLemHbUcPIL5vwHSMoI_aqzrZwp-GxVUXb5vgaKuLwvPLZfprENBqiJAZRkq7ODvppuEH7CwVGa133AmfWb_5V26Tb6PrPgbovyZiv7DFL=w1920-h937)
 9. ## I﻿nside *Src/index.js* write this and if you don't have MongoDB locally [click on this to help you install MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/)
 
-   ```javascript
+   ```jsx
+   //  Src/index.js
    import cors from 'cors';
    import express from 'express';
    import mongoose from 'mongoose';
@@ -60,7 +61,7 @@ First of all this stack is the most wanted stack in the industries and if you ha
    const MONGO_URI = 'mongodb://0.0.0.0:27017/test';
 
    app.get('/', (req, res) => {
-     res.status(201).send('<h1 style="text-align:center">My First Api</h1>');
+     res.status(202).send('<h1 style="text-align:center">My First Api</h1>');
    });
 
    mongoose.set('strictQuery', true);
@@ -74,3 +75,75 @@ First of all this stack is the most wanted stack in the industries and if you ha
    );
 
    ```
+
+   ### N﻿ow Let's write in our terminal `npm start `
+
+   ### l﻿et's walk through this code 
+
+   * #### c﻿ors is a library for security issues, we add it to middleware
+   * #### mongoose is a library for MongoDB , through mongoose you can access every MongoDB method or data
+10. ## A﻿nd then you need to add these lines of code
+
+    ```javascript
+    // Src/index.js
+
+    app.get('/test', (req, res) => {
+      res.status(202).json({ m: 'MongoDB', e: 'express', r: 'React', n: 'Nodejs' });
+    });
+    ```
+11. ## N﻿ow we have created our first rest API if you write this URL
+
+    ##### *http://localhost:5000/test ,* you will see your API as JSON data
+12. ##  L﻿et's fetch this data from our react project in *app.jsx file*
+
+    ##### w﻿rite these lines of code 
+
+    ```jsx
+    import { useState } from 'react'
+    import reactLogo from './assets/react.svg'
+    import './App.css'
+    import { useEffect } from 'react'
+
+    function App() {
+      const [count, setCount] = useState(0)
+      const [data, setData] = useState(0)
+      useEffect(() => {
+        fetch('http://localhost:5000/test')
+          .then((response) => response.json())
+          .then((data) => setData(data));
+      }, [])
+      return (
+        <div className="App">
+          <div>
+            <a href="https://vitejs.dev" target="_blank">
+              <img src="/vite.svg" className="logo" alt="Vite logo" />
+            </a>
+            <a href="https://reactjs.org" target="_blank">
+              <img src={reactLogo} className="logo react" alt="React logo" />
+            </a>
+          </div>
+          <h1>{data?.m} + {data?.e} + {data?.r} + {data?.n}</h1>
+          <div className="card">
+            <button onClick={() => setCount((count) => count + 1)}>
+              count is {count}
+            </button>
+            <p>
+              Edit <code>src/App.jsx</code> and save to test HMR
+            </p>
+          </div>
+          <p className="read-the-docs">
+            Click on the Vite and React logos to learn more
+          </p>
+        </div>
+      )
+    }
+
+    export default App
+
+    ```
+
+    ##### w﻿e fetch and display our data from the API 
+
+    # C﻿ongrats to you 
+
+    ### N﻿ow you can start your development journey with  the best stack ("MERN" stack)
