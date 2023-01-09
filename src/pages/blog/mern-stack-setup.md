@@ -22,10 +22,10 @@ First of all this stack is the most wanted stack in the industries and if you ha
 
 
 
-1. #### C﻿reate a folder let's name it ***MERN-Stack-Starter*** or any name you want
-2. #### i﻿nside this folder add another 2 folders one named ***client*** and the other one named ***server***
-3. #### i﻿nside the ***client*** folder write this in your terminal **`npm init vite`** and install react by vite
-4. #### i﻿nstall the dev dependencies by writing in your terminal **`npm i`**
-5. #### i﻿nside your ***server*** folder write this in your terminal **`npm init -y`**
-6. #### i﻿nside your server folder write this in your terminal ***`npm i express nodemon mongoose cors`***
+1. # C﻿reate a folder let's name it ***MERN-Stack-Starter*** or any name you want
+2. # i﻿nside this folder add another 2 folders one named ***client*** and the other one named ***server***
+3. # i﻿nside the ***client*** folder write this in your terminal **`npm init vite`** and install react by vite
+4. # i﻿nstall the dev dependencies by writing in your terminal **`npm i`**
+5. # i﻿nside your ***server*** folder write this in your terminal **`npm init -y`**
+6. # i﻿nside your server folder write this in your terminal ***`npm i express nodemon mongoose cors`***
 7.
