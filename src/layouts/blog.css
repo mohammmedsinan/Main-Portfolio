@@ -99,7 +99,12 @@
 #content-wrapper {
   max-width: 90vw;
 }
-
+#blog-container ol li{
+  margin: 30px 0px;
+}
+#blog-container p img{
+  margin-top: 30px;
+}
 @media (max-width: 576px) {}
 
 @media (min-width: 768px) {}

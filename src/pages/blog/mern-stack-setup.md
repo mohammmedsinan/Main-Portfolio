@@ -34,4 +34,116 @@ First of all this stack is the most wanted stack in the industries and if you ha
 
    ![img-4](https://lh3.googleusercontent.com/fife/AAbDypAAZNOYCpiciHaPRf7_cMgxBd_1YgYd-C5JwmjvwygafHChPPwEKZTxn4i8JB3S3_zoS3RtTDb1GesuQPJZKa5dmFy_6UEWFIamQ7QLTWaRBv6f12gyi8_XiALV31R_N1pA-o1zOMVAnuGevitX5t67UqQf8kvI4My_JgHLhV0dTD6qnSr4d9r7XjgwcliMUxsxxmtbRwUQn_3UuVNVACgPekL0BsnDNGnS_RXON4ZfuVKUzjgYyplvUo_HOGwAFBCTKcCa-8Ok9af7CZ9Hb3lQZuNNUkPI69AmMgCSIXLoiE74a4a-iI1FRorIh0va1K3ydfENJIrC7ogpOUNgPkFyDtPkhgWBtMikuY-GN-Z7xYHwSjg_jdrEQnEKEquwYDbdG0iFN3it3nrJEVntibu79BtXGj7Eb-T_uaIjXajNmd5L3ONQ-eJwHdtsB2Wa1WopttB71ejeaNuW4hfcHpJoTAvBz-22Eyb8a8YGGBQagR-LwkD95M4r_-hsj6E00hrkIXIetKCSwrIE3sHESoknSMbBjVWeQRB9yPfUOtCh6K1c92JeUzHSfnfbD-G1XHb5SPFY8efPrHKWLn66c2qirj3JdJ21tM5lmxaoFT_X-APFGCBmz9L1AmalcIFcm1W5AyZaXwRybOPHcoMZt8j8tXv0rVYJWd9dvkBpx7VXDSc-nMK1zu0mC98JP60LPKW5PPXhB3e9SjPuj_-Nivo_-Nnd7zqOLVYDOMTYR17wyl81X0TY6qDx6H5qHlyZZVqx__fltAAzD31a5P6-8JIAc8fji3KWsk8bPOjRsn5_F5PP8zyI61md0xKkOJ1k6BGP1PtZ3flwWq6sT8Po-sKiH6rCoIhqrtqKF_GpwMoPh6H8F156HL9xzK2IQt7ZkXVtaj0wX8ph1cwjhuMYv2vaWQBExIhtbyfJneLUf8z1Km74bcaGf7-1nP0jYjy-KvSxCE6CLJqqSJBskKRBORfkpqID_YJA0On_ai3RHz_DhXby2SV-RoE0p49tBJ0PMRHOM-lR-EsReUWquZuu6DZGP6mhyHrS53jZwUXL7Gpkb5juz-K0VsJP8Vk69ul8yjNszEr9LEZnnpfBZLr2b2xfrME3eA9F-H9cwhqU0MbvrEwOrm4jGREFPIadXPOmhufp_NtdzwRnJ2XEJu7-qhDYaFZC2POQHugOXgc38K_NX-Yja88HeGmm2NC8nFpX9m0KZWk5LHm_voguPi32mehcojQZiHJSLswtSoCNy1HkL2Wjiyfceuwys_DvZpCQzcgybA_Uq1oQarQBU_sCIK2nANKqaegKi3SxcBGfYheL5ok840Q8zG2_kHho79-I4BKzHmnRqAH3_THA2IhXM0XQgr76xywXEbe4jy_WpZLBPxmzb4nY729aIOdqUj_EuYubWqddsvkh6owqpgnmR_Ck-xgXCg7zUKb221egWzRrjghhboehHBIymAilcFD9MbtkiBnejDqxg6nS6APwXFvvwu6d6rTRO14xQZcfsIPNolzF3HwtKtb24hHfvjvU6JAe2kUy-WuqcsHauQ0mJFTcnVx25Dk_87oQXBxTLKPfeHpVHlIn3Tqmi47VUN82zSqjHepmY9Q-7LYlPSxSoAq8LPjesK6m3sg47bWUCjrx3UtgeqfhSEn9wsw4kPImTlQQutxU=w1920-h937)
 6. ## i﻿nside your server folder write this in your terminal ***`npm i express nodemon mongoose cors`***
-7.
+7. ## *package.json* write this 
+
+   ```json
+     "main": "index.js",
+     "type": "module",
+     "scripts": {
+       "start": "nodemon Src/index.js"
+     },
+   ```
+8. ## A﻿nd then create a folder and name it *Src* and inside the Src folder add a file and name it *index.js*
+
+   ![img-6](https://lh3.googleusercontent.com/fife/AAbDypB3O9qdTAC2hayC6rtab8_eJ0NveVznFSnmNRYxsgpje9FWlR_uCRV9UVz-IftoDypbs56OXWWYrH5SOvMukik78EepTblcQFVW_Vg1AEyCWfBEIDBRWnpWUdxlZEm0inwb1HjT6jpS4OP78gsFXOuEMAfj5-0qypaDwUWIYLWdEsqLCTazAte6mg7G6Jzz1M5P-cGjMEl5twP3AQa4GbKK_UtpDrXz7xWFZy9GdmbHqzbRU_Z7JoijujGpAvpFFYmJRjOjCqw154Mu9OWVWFqJXV5ubrQCdnXzvq0B-Xr0usrg6UpeldIJZt9ye12BH_sioyXotYoT3TudrLGZlfVqg0IazI9pvmlRHEpE3iD802eK6EQowxyrRDkGidvueUC0cvYvIPQTgQaVMyU7wzo6XNCtLOV1j6Xcu8C85bFLZjFLpsLBIHo8j-i5Ii33qZEwaxU5guwkKq1htX3fFi09ms93OqaK5VjIZT7YXjMrxrlNLm3PsZB-OwvSMMgibApJWftL2so18Gz_BIv5tdD4mzGbLxmGRA1_Z7IFnSqeQJ4K63yUaWdS6NFs3OY1LZH6mX8Mo23WQ25CJgJop0uTxGdgH5BXcV9CUyoNCi2VYAvCJoizo52LMehLWnwnWhWZB6lSYNdheeNROvbjcn2xxiJ7PQSbqZ37kgnPPX3Nkx6Uu0NxP8mKAR2P3p7cU6FydH_xT2k95qixKI6pBYAHMzuEJhSYqlOmKYQNuLd1vpvn7QeAwj08mG0Yl4xF61KChmrwIsXWvLM7_UN8p38foLePJf-Z_qGqPaa97hQgbjc21TKB1Enn2cwngov9zlAo-lb_xj5h3S7dmPFdCpn-iWERfJnaN45AkNBn-N71P4afXl5KVxIPSFGr3bVRo3JldWl5zuo7VFtw5KL14rcoI_JEXzpd6_R5uZpfeeIsVfk4-2xJlXWU_UYQqGC-QT5tq0YaeWk5L5Fz_2L9c971eB65kgs-x0gde5Yj3JwyB8oWeGJryuOulnS5DZrgmnX2eyCadj9uHgWopuWZhPKC2oUB8d0B8PWB0VgYyJEGCenvGbTkMvSk320E5-1mom_8LxoJ2W_CkgCZ0FGIPa-Q98t0NWAsLOWqSGeuEygOYp9SCHy08AKPfufdBXLnc268xINMkAEid-c7OE0rShiuuS1pIAtJGaWwc8ge8_8SyZTrHq9j4313-8CKlAbYHyf0odYN5OaMK9hbAoDx85oB5KeE2ThMkO_dGqJI96KMRXvk2ojGVCb3tE5hZMD13DCFXwzXezUT84OPI2h4znpAqiTYSV89W_nBkCqLpt9bxBaWgoTyejcAmhtiFdJ6r30ZawnZMV2ivjiiaZPvzcDFWLsF47kB4dipQLlu6Z1KeRjYHD-vIVCN-UiVZZ5Zpi4BB4tD1QkxJlmxiNynN58azewFAGZwEwUUcaLigFHQigShqCqvq7SCX6fLO-q_Ozz6Fv-YJegD-hQFsCuiqw0NSVFV2PlNCtinOAQpBibc1bXKQykPrF82zFED2X7FND0kbxQOvUy1jzn87bk74WXTqjVdClbLemHbUcPIL5vwHSMoI_aqzrZwp-GxVUXb5vgaKuLwvPLZfprENBqiJAZRkq7ODvppuEH7CwVGa133AmfWb_5V26Tb6PrPgbovyZiv7DFL=w1920-h937)
+9. ## I﻿nside *Src/index.js* write this and if you don't have MongoDB locally [click on this to help you install MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/)
+
+   ```jsx
+   //  Src/index.js
+   import cors from 'cors';
+   import express from 'express';
+   import mongoose from 'mongoose';
+
+   const app = express();
+   app.use(cors());
+
+   const PORT = 5000;
+   const MONGO_URI = 'mongodb://0.0.0.0:27017/test';
+
+   app.get('/', (req, res) => {
+     res.status(202).send('<h1 style="text-align:center">My First Api</h1>');
+   });
+
+   mongoose.set('strictQuery', true);
+   mongoose.connect(
+     MONGO_URI,
+     {
+       useNewUrlParser: true,
+       useUnifiedTopology: true,
+     },
+     () => app.listen(PORT, () => console.log(`server is running now in port ${PORT}`)),
+   );
+
+   ```
+
+   ### N﻿ow Let's write in our terminal `npm start `
+
+   ### l﻿et's walk through this code 
+
+   * #### c﻿ors is a library for security issues, we add it to middleware
+   * #### mongoose is a library for MongoDB , through mongoose you can access every MongoDB method or data
+10. ## A﻿nd then you need to add these lines of code
+
+    ```javascript
+    // Src/index.js
+
+    app.get('/test', (req, res) => {
+      res.status(202).json({ m: 'MongoDB', e: 'express', r: 'React', n: 'Nodejs' });
+    });
+    ```
+11. ## N﻿ow we have created our first rest API if you write this URL
+
+    ##### *http://localhost:5000/test ,* you will see your API as JSON data
+12. ##  L﻿et's fetch this data from our react project in *app.jsx file*
+
+    ##### w﻿rite these lines of code 
+
+    ```jsx
+    import { useState } from 'react'
+    import reactLogo from './assets/react.svg'
+    import './App.css'
+    import { useEffect } from 'react'
+
+    function App() {
+      const [count, setCount] = useState(0)
+      const [data, setData] = useState(0)
+      useEffect(() => {
+        fetch('http://localhost:5000/test')
+          .then((response) => response.json())
+          .then((data) => setData(data));
+      }, [])
+      return (
+        <div className="App">
+          <div>
+            <a href="https://vitejs.dev" target="_blank">
+              <img src="/vite.svg" className="logo" alt="Vite logo" />
+            </a>
+            <a href="https://reactjs.org" target="_blank">
+              <img src={reactLogo} className="logo react" alt="React logo" />
+            </a>
+          </div>
+          <h1>{data?.m} + {data?.e} + {data?.r} + {data?.n}</h1>
+          <div className="card">
+            <button onClick={() => setCount((count) => count + 1)}>
+              count is {count}
+            </button>
+            <p>
+              Edit <code>src/App.jsx</code> and save to test HMR
+            </p>
+          </div>
+          <p className="read-the-docs">
+            Click on the Vite and React logos to learn more
+          </p>
+        </div>
+      )
+    }
+
+    export default App
+
+    ```
+
+    ##### w﻿e fetch and display our data from the API 
+
+    # C﻿ongrats to you 
+
+    ### N﻿ow you can start your development journey with  the best stack ("MERN" stack)
