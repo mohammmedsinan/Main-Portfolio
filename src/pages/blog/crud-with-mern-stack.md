@@ -21,14 +21,13 @@ tag:
 # ***O﻿k , now let's start with our server***
 
 1. #### C﻿reate three new files (models , routes , controllers)
-2. #### A﻿dd this to your index.js file 
+2. #### A﻿dd this to your index.js file
 
    ```javascript
    // src/index.js
    import Post from './routes/post.js';
 
    app.use('/post' , Post);
-
    ```
 3. #### R﻿outes folder add file and name it post.js and write these lines of code
 
@@ -39,7 +38,6 @@ tag:
    const router = express.Router();
 
    export default router;
-
    ```
 4. #### C﻿ontrollers folder add a new file and name it post.js and then add these lines of code
 
@@ -52,7 +50,6 @@ tag:
    export const updatePost = async (req, res) => {};
    //delete post
    export const deletePost = async (req, res) => {};
-
    ```
 5. #### m﻿odels folder add a new file and name it post.js , then add these codes
 
@@ -71,17 +68,14 @@ tag:
 
    const postsData = mongoose.model('post', Post);
    export default postsData;
-
    ```
-6. #### R﻿outes in post.js write these lines of code 
+6. #### R﻿outes in post.js write these lines of code
 
    ```javascript
-
    router.post('/get', getAllPosts);
    router.post('/create', createPost);
    router.put('/update/:id', updatePost);
    router.delete('/delete/:id', deletePost);
-
    ```
 7. #### N﻿ow Let's work on the APIs in controllers/post.js
 
@@ -178,4 +172,10 @@ tag:
        }
      };
      ```
-8. #### N﻿ow we are done from the server side all we need is to fetch API from the front-end
+8. #### N﻿ow we are done from the server side all we need is to fetch the API from the front-end
+
+   * ##### W﻿e need to display the posts on the page inside client/src/App.jsx write these lines of code
+
+     ```jsx
+
+     ```
