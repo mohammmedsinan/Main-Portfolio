@@ -16,9 +16,9 @@ tag:
   - mongoDB
   - MERN
 ---
-let's start with our MERN-Starter project and make sure you have it locally by cloning it from this [repository ](https://github.com/mohammmedsinan/MERN-Stack-Starter)
+# ***let's start with our MERN-Starter project and make sure you have it locally by cloning it from this [repository](https://github.com/mohammmedsinan/MERN-Stack-Starter)***
 
-O﻿k , now let's start with our server
+# ***O﻿k , now let's start with our server***
 
 1. #### C﻿reate three new files (models , routes , controllers)
 2. #### A﻿dd this to your index.js file 
