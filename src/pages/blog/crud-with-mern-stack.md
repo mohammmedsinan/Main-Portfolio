@@ -159,6 +159,23 @@ O﻿k , now let's start with our server
      ```
    * #### L﻿ast but not least is delete posts
 
+     ```javascript
+     //delete post
+     export const deletePost = async (req, res) => {
+       const id = req.params.id;
+       try {
+         await Post.deleteOne({ _id: id }).then((e) => {
+           res.status(201).json({
+             message: 'deleted this post successfully',
+             data: e,
+           });
+         });
+       } catch (err) {
+         res.status(404).json({
+           message: "This id isn't found there sorry!",
+           ErrorData: err,
+         });
+       }
+     };
      ```
-
-     ```
+8. #### N﻿ow we are done from the server side all we need is to fetch API from the front-end
