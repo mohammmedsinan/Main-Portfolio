@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/blogLayout.astro
-thumbnail: " /assets/img1.png"
+thumbnail: " /assets/img8.png"
 title: Javascript fetching API easily
 description: "This Post will make you fetch API from any back-end , easily and
   straight to the point "
 summary: "This Post will make you fetch API from any back-end , easily and
   straight to the point "
-avatar: " /assets/img1.png"
+avatar: " /assets/img8.png"
 author: Mohammed sinan
 date: Jan 15th 23
 tag:
