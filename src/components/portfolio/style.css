@@ -8,7 +8,7 @@
   background-color: var(--secondaryColor);
   border-radius: 20px;
   padding: 16px 0px;
-  box-shadow: var(--secondaryColor) 0px 0px 5px 1px;
+  /* box-shadow: var(--secondaryColor) 0px 0px 5px 1px; */
   position: absolute;
   transition: all ease 0.8s;
   opacity: 0;
@@ -86,25 +86,30 @@
   width: 100%;
   height: 100%;
 }
+
 @media (min-width: 992px) {
   .Slider-Helper {
     align-items: center;
   }
 
 }
+
 @media (max-width: 670px) {
-  .Slider-Card{
+  .Slider-Card {
     max-height: 240px;
   }
-  .Slider-Description{
+
+  .Slider-Description {
     font-size: 10px;
     margin: 5px 0px;
   }
-  .btn-collection button{
+
+  .btn-collection button {
     padding: 8px 25px;
     font-size: 10px;
   }
-  .portfolio-container{
+
+  .portfolio-container {
     min-height: 270px !important;
   }
 }
