@@ -7,7 +7,7 @@
 .blog-card {
   background-color: var(--secondaryColor);
   border-radius: 20px;
-  border-top-right-radius: 100px;
+  border-top-right-radius: 125px;
   min-height: 200px;
   padding: 20px 20px;
   max-width: 600px;
@@ -110,8 +110,12 @@
   }
 }
 
-@media (min-width: 992px) {}
+@media (max-width: 650px) {
+  .card-header {
+    max-width: 90%;
+  }
 
-@media (min-width: 1200px) {}
-
-@media (min-width: 1400px) {}
+  .blog-title-outside {
+    font-size: 18px;
+  }
+}
