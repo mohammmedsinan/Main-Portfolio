@@ -8,7 +8,7 @@
   background-color: var(--secondaryColor);
   border-radius: 20px;
   padding: 16px 0px;
-  /* box-shadow: var(--secondaryColor) 0px 0px 5px 1px; */
+  box-shadow: var(--secondaryColor) 0px 0px 20px 0px;
   position: absolute;
   transition: all ease 0.8s;
   opacity: 0;
