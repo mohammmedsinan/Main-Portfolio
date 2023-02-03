@@ -42,5 +42,33 @@ tag:
 * ### L﻿et's say we have this function inside our project 
 
   ```javascript
+  function greetings(name) {
+    return 'hello' + ' ' + name;
+  }
+
+  module.exports = greetings;
 
   ```
+
+  ### S﻿o this function will return hello and whatever string you did pass inside the argument
+* ### N﻿ow inside (anything.test.js)
+
+  ```javascript
+  const Greeting = require('./index');
+
+  test('Greeting for the user', () => {
+    expect(
+      Greeting('joe')
+      ).toBe('hello joe');
+  });
+
+  ```
+
+  ### T﻿his test function is static you need to add it in every test jest file
+
+  ### A﻿lso expect is static inside this expect function you will pass whatever function you wanna test it and this test is called unity testing
+
+  ### a﻿fter expected method you will write this 
+* ### .﻿toBe(whatever value you expect the function will return)
+
+  ## A﻿nd don't forget this a lot of testing option check the docs inside jest website
