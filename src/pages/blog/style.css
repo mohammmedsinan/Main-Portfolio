@@ -44,6 +44,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.blog-avatar img {
+  min-width: 60px;
 }
 
 .avatar-img {
@@ -101,6 +107,22 @@
 
   .blog-card {
     margin: 20px 0px;
+  }
+
+  .blog-title-outside {
+    font-size: 16px !important;
+  }
+
+  .blog-description {
+    font-size: 12px;
+  }
+
+  .created-at {
+    font-size: 13px;
+  }
+
+  .author {
+    font-size: 13px;
   }
 }
 

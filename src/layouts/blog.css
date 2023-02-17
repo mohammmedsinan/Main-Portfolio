@@ -108,7 +108,31 @@
   margin-top: 30px;
 }
 
-@media (max-width: 576px) {}
+#blog-content-container ol {
+  padding: 0px 10px;
+}
+
+@media (max-width: 376px) {
+  p img {
+    max-width: 300px;
+  }
+
+  #blog-container h1 {
+    font-size: 40px;
+  }
+
+  .tags {
+    font-size: 12px;
+  }
+
+  #blog-give-info {
+    font-size: 12px;
+  }
+
+  #blog-description {
+    font-size: 12px;
+  }
+}
 
 @media (min-width: 768px) {}
 

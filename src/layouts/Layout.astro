@@ -30,11 +30,13 @@ import './Home.css'
 	</body>
 </html>
 <style is:global define:vars={{ PrimaryColor, secondaryColor }}>
-
-	body {
+body {
 		background: var(--PrimaryColor);
 		min-height: 100vh;
 		height: 100%;
+	}
+	body::-webkit-scrollbar {
+display: none;
 	}
 	h1{
     color: var(--secondaryColor);
