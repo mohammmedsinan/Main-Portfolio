@@ -3,43 +3,44 @@ import './style.css';
 const portfolioArray = [
   {
     default: true,
-    title: 'About the Project1',
-    img_src:"img",
-    link:'https://mohammmedsinan.github.io/Re-Build-Website',
+    title: 'React Dashboard',
+    img_src:"dashboard",
+    link:'https://dashboard-react-2.netlify.app/',   
+    github:'https://github.com/mohammmedsinan/Sulation-For-Redux-Complexity-/tree/polished',
     description:
       ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
   },
   {
-    title: 'About the Project2',
-    img_src:"img2",
+    title: 'Old Portfolio',
+    img_src:"portfolio",
+    link:'https://majestic-jalebi-06c8e2.netlify.app/',   
+    github:'https://github.com/mohammmedsinan/Portfolio-Src',
     description:
       ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
   },
   {
-    title: 'About the Project3',
-    img_src:"img3",
-    link:"https://mohammmedsinan.github.io/Re-Build-Website-ANTD-",
+    title: 'AntD Landing Page',
+    img_src:"antd",
+    link:"https://monumental-boba-49323c.netlify.app/",    
+    github:"https://github.com/mohammmedsinan/SRC-Code-ANTD-",
     description:
       ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
   },
   {
-    title: 'About the Project4',
-    img_src:"",
-    link:"https://mohammmedsinan.github.io/Portfolio-DEPLOYED/#/",
+    title: 'Rebuild Greener',
+    img_src:"greener",
+    link:"https://euphonious-zuccutto-7e305e.netlify.app/",    
+    github:"https://github.com/mohammmedsinan/Re-Build-Website",
     description:
       ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
   },
   {
-    title: 'About the Project5',
-    img_src:"",
+    title: 'Purple',
+    img_src:"purple",
+    link:"https://wonderful-creponne-1c1595.netlify.app/",    
+    github:"https://github.com/mohammmedsinan/Re-Build-website-3-Src-",
     description:
       ' Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
-  },
-  {
-    title: 'About the Project2312312',
-    img_src:"",
-    description:
-      '  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
   },
 ];
 let counter = 0;
@@ -54,7 +55,7 @@ let counter = 0;
           <div 
             class={`Slider-Card ${element.default ? 'default-slider' : ''} public-one backgroundImg`}
             id={`slider-element-${counter}`}
-            style={`background-image: url('/assets/${element.img_src}.jpg')`}
+            style={`background-image: url('/assets/${element.img_src}.jpg');`}
           >
             <section
               style="display: flex; justify-content: center; align-items: center; flex-direction: column;"
@@ -63,8 +64,8 @@ let counter = 0;
               <h1 class="Slider-Title opacity-0">{element.title}</h1>
               <p class="Slider-Description opacity-0">{element.description}</p>
               <div class="btn-collection opacity-0" >
-                <button>Source Code</button>
-                <button>Preview</button>
+                <a target="_blank" href={element.github}>Source Code</a>
+                <a target="_blank" href={element.link}>Preview</a>
               </div>
             </section>
           </div>

@@ -13,10 +13,11 @@
   transition: all ease 0.8s;
   opacity: 0;
   max-width: 600px;
+  max-height: 300px;
 }
 
 .Slider-Description {
-  margin: 30px 0px;
+  margin: 20px 0px;
   color: var(--PrimaryColor);
   max-width: 70%;
 
@@ -32,7 +33,7 @@
   width: 100%;
 }
 
-.btn-collection button {
+.btn-collection a {
   padding: 10px 40px;
   border: none;
   border-radius: 10px;
@@ -41,14 +42,14 @@
   cursor: pointer;
 }
 
-.btn-collection button:last-child {
+.btn-collection a:last-child {
   color: var(--secondaryColor);
   background-color: var(--PrimaryColor);
   border: 2px solid var(--secondaryColor);
   transition: all ease 0.3s;
 }
 
-.btn-collection button:not(last-child) {
+.btn-collection a:not(last-child) {
   border: 2px solid var(--PrimaryColor);
   color: var(--PrimaryColor);
   background-color: var(--secondaryColor);
@@ -58,6 +59,7 @@
 
 .default-slider {
   opacity: 1;
+  z-index: 9999999999999999;
 }
 
 .right {
@@ -105,7 +107,7 @@
     max-width: 330px;
   }
 
-  .btn-collection button {
+  .btn-collection a {
     padding: 6px 15px;
     font-size: 10px;
     margin-top: 4px;
