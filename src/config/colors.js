@@ -1,2 +1,2 @@
-export let PrimaryColor = '#FFFFFF';
-export let secondaryColor = '#8848ff';
+export let PrimaryColor = '#8848ff';
+export let secondaryColor = '#FFFFFF';
