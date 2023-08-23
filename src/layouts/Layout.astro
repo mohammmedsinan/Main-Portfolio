@@ -1,52 +1,52 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 // import '~/assets/styles/base.css';
 // import CustomStyles from '~/components/CustomStyles.astro';
 
 const { title } = Astro.props;
-import {PrimaryColor,secondaryColor} from '../config/colors'
-import Menu from '../components/Menu/Menu.jsx'
-import {Icon} from 'astro-icon'
-import './Home.css'
+import { PrimaryColor, secondaryColor } from "../config/colors";
+import Menu from "../components/Menu/Menu.jsx";
+import { Icon } from "astro-icon";
+import "./Home.css";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body style="overflow-x: hidden; height: 100%; width:100%">
-		<div class="container"  >
-			<Icon name="border" class="border b1" />
-			<slot />
-		<div id="menu">
-			<Menu />
-		</div>
-		<Icon name="border" class="border b2" />
-		</div>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body style="overflow-x: hidden; height: 100%; width:100%">
+    <div class="p-4">
+        <Icon name="border" class="b1 max-w-[15vw] sm:block hidden" />
+      <div>
+        <slot />
+      </div>
+      <div id="menu">
+        <Menu />
+      </div>
+      <Icon name="border" class="b2 max-w-[15vw] sm:block hidden" />
+    </div>
+  </body>
 </html>
 <style is:global define:vars={{ PrimaryColor, secondaryColor }}>
-body {
-		background: var(--PrimaryColor);
-		min-height: 100vh;
-		height: 100%;
-	}
-	body::-webkit-scrollbar {
-display: none;
-	}
-	h1{
+  body {
+    background: var(--PrimaryColor);
+    min-height: 100vh;
+    height: 100%;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
     color: var(--secondaryColor);
-	
-
-}p{
+  }
+  p {
     color: var(--secondaryColor);
-}
-
+  }
 </style>

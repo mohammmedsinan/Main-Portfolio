@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--aw-color-primary)',
-        secondary: 'var(--aw-color-secondary)',
+        primary: 'var(--PrimaryColor)',
+        secondary: 'var(--secondaryColor)',
         accent: 'var(--aw-color-accent)',
       },
       fontFamily: {

@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   padding: 0px;
   margin: 0px;
@@ -30,7 +33,6 @@
   }
 }
 
-@media (min-width: 768px) {}
 
 @media (min-width: 992px) {
   .arrow {
@@ -46,4 +48,11 @@
   }
 }
 
-@media (min-width: 1200px) {}
+
+
+@layer components {
+  .btn-primary { @apply text-primary bg-secondary px-10 py-2 rounded-2xl font-bold text-lg }
+  .btn-secondary { @apply text-secondary bg-primary border border-secondary px-16 py-2 rounded-2xl font-bold text-lg flex justify-center }
+
+  
+}

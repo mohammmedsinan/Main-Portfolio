@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     //TailWind Integration
     tailwind({
-        applyBaseStyles: false,
+        applyBaseStyles: true,
     }),
     //Image Integration
     image(),

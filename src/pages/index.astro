@@ -1,67 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Logo from "../components/logo.astro";
+import {Icon} from 'astro-icon'
+
+
+//=================== Css =============================
+
 import "./home.css";
+//=================== Component & Layout =============================
+import Layout from "../layouts/Layout.astro";
+import {data} from '../data'
+const { Icons,contact,header,plot,plotV2,resume,title} = data.home;
 // const posts = await Astro.glob('./blog/*.md');
 ---
 
-<Layout title="Mohammed Sinan">
+<Layout title={title}>
   <div id="container">
     <div class="sub-container">
-      <h1 id="name" style="display: flex;">Mohammed Sinan</h1>
-      <div class="hr mobile">
-        <hr />
-      </div>
-      <p id="discrip">
-        <!-- Hi, I am a front-end developer and I have some experience with back-end development, I have experience in designing and API calling also I did work on big and huge projects and I do have a blog I have been posting in it web development topics also solving problems and explain the new technologies, Mainly I work with React as a front-end framework I have solved so many problems with this framework and 3rd party libraries. -->
-        Welcome to my portfolio! I'm a front-end developer with a passion
-        for creating beautiful and intuitive web experiences. With 3 years of experience
-        in the industry, I specialize in developing responsive, accessible, and user-friendly
-        websites and web applications. My journey into web development began when
-        I discovered my love for design and technology. I found that I could combine
-        my creative skills with my technical abilities to bring digital products
-        to life. Since then, I have been honing my skills in HTML, CSS, and JavaScript,
-        as well as front-end frameworks like React and NextJS.
-      </p>
-
-      <div class="desktop btn-sub-container" style="display: flex;">
-        <a
-          class="btn"
-          id="btn1"
-          href="./Mohammed_Sinan_CV.pdf"
-          download="Mohammed Al-mousa resume">Resume</a
-        >
-        <a class="btn" id="btn2" href="mailto:mohammedbusiness1099@gmail.com"
-          >Contact</a
-        >
+      <h1 class="text-7xl text-center md:text-left" >{header}</h1>
+        <hr class="block md:hidden m-auto w-64 mt-10"/>
+      <p id="discrip">{plot}</p>
+      <div class="hidden md:flex justify-end">
+        <a class="btn-primary mr-5" href={resume} download="Mohammed_Sinan_CV">Resume</a>
+        <a class="btn-secondary" href={contact}>Contact</a>
       </div>
     </div>
-    <div class="logos mobile" style="display:none">
-      <Logo />
+    <div class="flex md:hidden justify-center">{Icons?.map(icon => <a href={icon.link} target="_blank"><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125"/></a>)}</div>
+    <div class="desktop vr" />
+    <div id="discrip2"><p>{plotV2}</p>
+      <div class="hidden md:flex md:justify-center">{Icons?.map(icon => <a href={icon.link} target="_blank"><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125" /></a>)}</div>
     </div>
-    <div class="desktop vr"></div>
-    <div id="discrip2">
-      <p>
-        Feel free to contact me on these platforms, Also you can
-        check out my GitHub repositories, All of my projects
-        have been published on GitHub.
-      </p>
-      <div class="desktop">
-        <Logo />
-      </div>
-    </div>
-    <div class="btn-container mobile" style="display: none;">
-      <a
-        class="btn"
-        id="btn1"
-        href="./Mohammed_Sinan_CV.pdf"
-        download="Mohammed Al-mousa resume">Resume</a
-      >
-      <a class="btn" id="btn2" href="mailto:mohammedbusiness1099@gmail.com"
-        >Contact</a
-      >
+    <div class="flex md:hidden justify-center mt-4">
+      <a class="btn-primary mr-5" href={resume} download="Mohammed_Sinan_CV">Resume</a>
+      <a class="btn-secondary" href={contact}>Contact</a>
     </div>
   </div>
 </Layout>
-
-<style></style>
