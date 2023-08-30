@@ -3,18 +3,31 @@ import Layout from '../../layouts/PageLayout.astro'
 import { getCollection } from 'astro:content';
 import {data} from '@data'
 const {title} = data.blog
-const posts = (await getCollection('blog', ({ data }) => {
+const post = (await getCollection('blog', ({ data }) => {
   return data.isDraft !== true;
 })).sort( (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 const arr = [0,1,2,3,45,6,8,7,78,]
+// ===========================================================================
+const builderAPIpublicKey = process.env.BUILDER_API_PUBLIC_KEY;
+const builderModel = process.env.BUILDER_BLOGPOST_MODEL;
+
+const { results: posts } = await fetch(
+  `https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({
+    apiKey: builderAPIpublicKey,
+    fields: ["data.slug", "data.title"].join(","),
+    cachebust: "true",
+  }).toString()}`
+)
+  .then((res) => res.json())
+  .catch();
 ---
 
 <Layout title={title} isMenuFixed lang='en'>
 <div class="flex px-0 lg:px-28 flex-wrap justify-center items-center">
-{arr.map((post) => (
-<a href="#" class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
+{posts.map(({ data: { slug, title } }) => (
+<a href={`/blog/${slug}`} class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
   <img src="https://placehold.co/600x400" alt="https://placehold.co/600x400" class="rounded-lg">
-  <h1 class="text-xl py-1 text-secondary font-bold group-hover:text-primary sametranstion">Lorem ipsum dolor</h1>
+  <h1 class="text-xl py-1 text-secondary font-bold group-hover:text-primary sametranstion">{title}</h1>
   <p class="text-xs text-gray-200 group-hover:text-primary sametranstion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dignissimos cumque sequi consectetur unde alias sapiente omnis quasi in minima!</p>
 </a>
   // post.slug.includes('ar')&&<a href={`/blog/${post.slug}`}>{post.data.title}</a>
@@ -24,3 +37,5 @@ const arr = [0,1,2,3,45,6,8,7,78,]
 </Layout>
 
 <style>.sametranstion:hover{transition: all ease-in 0.2s;}</style>
+
+
