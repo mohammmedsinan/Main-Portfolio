@@ -1,33 +1,26 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import './style.css'
-import '../home.css'
-const posts = await Astro.glob('./*.md');
+import Layout from '../../layouts/PageLayout.astro'
+import { getCollection } from 'astro:content';
+import {data} from '@data'
+const {title} = data.blog
+const posts = (await getCollection('blog', ({ data }) => {
+  return data.isDraft !== true;
+})).sort( (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const arr = [0,1,2,3,45,6,8,7,78,]
 ---
 
-
-<Layout title="Blog">
-    <!-- <div id="blog-container-outside">
-        <div id="wrapper">
-            {posts.map(MDfile => {
-                return(
-                    <a href={`https://mohammed-sinan.netlify.app${MDfile.url}`}>
-                <div class="blog-card">
-                <div class="card-header">
-                    <div class="blog-avatar">{MDfile.frontmatter.avatar&& <img src={MDfile.frontmatter.avatar} alt="MDfile.frontmatter.avatar"/>}</div>
-                    <div class="hr"></div>
-                    <div class="blog-title-outside">{MDfile.frontmatter.title}</div>
-                </div>
-                <div class="blog-description">{MDfile.frontmatter.summary}</div>
-                <div class="blog-info">
-                    <div class="created-at"><span class="strong">Date</span> : {MDfile?.frontmatter.date}</div>
-                    <div class="author"><span class="strong">Author</span> : {MDfile?.frontmatter.author}</div>
-                </div>
-            </div>
-        </a>
-                )
-            })}
-        </div>
-    </div> -->
-    <h1 style="color:--secondaryColor; text-align: center; padding:15vh 0px;">Comming soon.....</h1>
+<Layout title={title} isMenuFixed lang='en'>
+<div class="flex px-0 lg:px-28 flex-wrap justify-center items-center">
+{arr.map((post) => (
+<a href="#" class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
+  <img src="https://placehold.co/600x400" alt="https://placehold.co/600x400" class="rounded-lg">
+  <h1 class="text-xl py-1 text-secondary font-bold group-hover:text-primary sametranstion">Lorem ipsum dolor</h1>
+  <p class="text-xs text-gray-200 group-hover:text-primary sametranstion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dignissimos cumque sequi consectetur unde alias sapiente omnis quasi in minima!</p>
+</a>
+  // post.slug.includes('ar')&&<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+)
+)}
+</div>
 </Layout>
+
+<style>.sametranstion:hover{transition: all ease-in 0.2s;}</style>

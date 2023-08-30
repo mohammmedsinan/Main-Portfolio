@@ -1,2 +1,3 @@
-export let PrimaryColor = '#8848ff';
-export let secondaryColor = '#FFFFFF';
+export const PrimaryColor = '#8848ff';
+export const secondaryColor = '#FFFFFF';
+export const accent = "#"

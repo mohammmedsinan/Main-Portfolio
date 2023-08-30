@@ -2,33 +2,29 @@
 import {Icon} from 'astro-icon'
 
 
-//=================== Css =============================
-
-import "./home.css";
 //=================== Component & Layout =============================
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/PageLayout.astro";
 import {data} from '../data'
 const { Icons,contact,header,plot,plotV2,resume,title} = data.home;
-// const posts = await Astro.glob('./blog/*.md');
 ---
 
-<Layout title={title}>
-  <div id="container">
-    <div class="sub-container">
-      <h1 class="text-7xl text-center md:text-left" >{header}</h1>
-        <hr class="block md:hidden m-auto w-64 mt-10"/>
-      <p id="discrip">{plot}</p>
-      <div class="hidden md:flex justify-end">
+<Layout title={title} lang='en'>
+  <div class="p-5 lg:px-32 flex flex-col lg:flex-row justify-center md:px-40 items-center">
+    <div class="flex flex-col lg:max-w-[60%]">
+      <h1 class="text-7xl text-center lg:text-left text-secondary font-medium" >{header}</h1>
+        <hr class="block lg:hidden m-auto w-64 mt-10"/>
+      <p class="text-gray-100 text-center lg:text-left py-5 lg:py-3 text-xl">{plot}</p>
+      <div class="hidden lg:flex justify-end">
         <a class="btn-primary mr-5" href={resume} download="Mohammed_Sinan_CV">Resume</a>
         <a class="btn-secondary" href={contact}>Contact</a>
       </div>
     </div>
-    <div class="flex md:hidden justify-center">{Icons?.map(icon => <a href={icon.link} target="_blank"><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125"/></a>)}</div>
-    <div class="desktop vr" />
-    <div id="discrip2"><p>{plotV2}</p>
-      <div class="hidden md:flex md:justify-center">{Icons?.map(icon => <a href={icon.link} target="_blank"><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125" /></a>)}</div>
+    <div class="flex lg:hidden justify-center">{Icons?.map(icon => <a href={icon.link} target="_blank" aria-label={icon.name}><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125 px-1"/></a>)}</div>
+    <div class="h-60 bg-secondary w-1 hidden lg:block mx-10 rounded-full" />
+    <div class="text-gray-100 text-center lg:text-left py-3 lg:p-0 lg:max-w-[15vw]"><p>{plotV2}</p>
+      <div class="hidden lg:flex lg:justify-start">{Icons?.map(icon => <a href={icon.link} target="_blank" aria-label={icon.name}><Icon name={icon.name} class="w-20 transition-all text-secondary hover:scale-125 px-1" /></a>)}</div>
     </div>
-    <div class="flex md:hidden justify-center mt-4">
+    <div class="flex lg:hidden justify-center mt-4">
       <a class="btn-primary mr-5" href={resume} download="Mohammed_Sinan_CV">Resume</a>
       <a class="btn-secondary" href={contact}>Contact</a>
     </div>
