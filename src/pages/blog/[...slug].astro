@@ -1,7 +1,7 @@
 ---
 export async function getStaticPaths() {
-  const builderModel = process.env.BUILDER_BLOGPOST_MODEL;
-  const builderAPIpublicKey = process.env.BUILDER_API_PUBLIC_KEY;
+  const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+  const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
   const { results: posts } = await fetch(
     `https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams(
       {
