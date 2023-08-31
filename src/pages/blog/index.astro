@@ -23,7 +23,7 @@ const { results: posts } = await fetch(
 ---
 
 <Layout title={title} isMenuFixed lang='en'>
-<div class="flex px-0 lg:px-28 flex-wrap justify-center items-center">
+<div class="flex px-0 lg:px-28 flex-wrap justify-center items-center" transition:persist="blog">
 {posts.map(({ data: { slug, title } }) => (
 <a href={`/blog/${slug}`} class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
   <img src="https://placehold.co/600x400" alt="https://placehold.co/600x400" class="rounded-lg">

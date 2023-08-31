@@ -1,4 +1,12 @@
 ---
+export interface Props {
+  apiKey: string;
+  url:string;
+  cachebust:string;
+  }
+
+import Layout from '../../layouts/BaseLayout.astro'
+
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
@@ -25,13 +33,12 @@ export async function getStaticPaths() {
   ];
 }
 const { slug } = Astro.params;
-const { title } = Astro.props;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 // Builder's API requires this field but for this use case the url doesn't seem to matter - the API returns the same HTML
 const encodedUrl = encodeURIComponent("moot");
-const { html: postHTML } = await fetch(
-  `https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams({
+const blogData = await fetch(
+  `https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams<Props>({
     apiKey: builderAPIpublicKey,
     url: encodedUrl,
     "query.data.slug": slug,
@@ -41,15 +48,6 @@ const { html: postHTML } = await fetch(
   .then((res) => res.json())
   .catch();
 ---
-<html lang="en">
-  <head>
-    <title>{title}</title>
-  </head>
-  <body>
-    <header>This is your header</header>
-    <article>
-      <Fragment set:html={postHTML} />
-    </article>
-    <footer>The is your footer</footer>
-  </body>
-</html>
+<Layout lang='en' title='title'>
+  <Fragment set:html={blogData.html.postHTML} transition:persist="blog"/>
+</Layout>

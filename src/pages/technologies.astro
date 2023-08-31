@@ -1,7 +1,21 @@
 ---
-import Layout from '../layouts/PageLayout.astro'
+import { Icon } from "astro-icon";
+import Layout from "../layouts/PageLayout.astro";
+import {data} from '@data';
+const {icons} = data.skill;
 ---
 
-<Layout>
-    
+<Layout lang="en" title="Technologies">
+  <div class="flex justify-center">
+    <div class="flex flex-wrap bg-secondary rounded-xl md:max-w-[55vw] max-w-[90vw] justify-center py-5">
+      {icons.map((element) => {
+          return (
+            <div class="bg-primary m-2 rounded-lg cursor-pointer w-[15vw] h-[15vw] flex justify-center items-center group max-w-[150px] max-h-[130px]">
+              <p class="text-secondary m-3 md:text-[1vw] text-[3vw] group-hover:block hidden font-bold">{element.name}</p>
+              <Icon name={element.icon} class="group-hover:hidden block text-secondary w-[10vw] max-w-[70px]" />
+            </div>
+          )})}
+    </div>
+  </div>
 </Layout>
+
