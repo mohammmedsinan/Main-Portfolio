@@ -39,12 +39,12 @@ export let data = {
   },
     portfolio: {
         work: [
-            {name:"Dashboard",image:"",github:'https://github.com/mohammmedsinan/Sulation-For-Redux-Complexity-/tree/polished',live:"https://dashboard-react-2.netlify.app/"},
-            {name:"Integrator",image:"",github:'https://github.com/mohammmedsinan/Integrator',live:"https://integrator-project.netlify.app/"},
-            {name:"Portfolio",image:"",github:'https://github.com/mohammmedsinan/Re-Build-Website',live:"https://majestic-jalebi-06c8e2.netlify.app/"},
-            {name:"Antd",image:"",github:'https://github.com/mohammmedsinan/SRC-Code-ANTD-',live:"https://monumental-boba-49323c.netlify.app/"},
-            {name:"Greener",image:"",github:'https://github.com/mohammmedsinan/Re-Build-Website',live:"https://euphonious-zuccutto-7e305e.netlify.app/"},
-            {name:"Purple",image:"",github:'https://github.com/mohammmedsinan/Re-Build-Website-2',live:"https://wonderful-creponne-1c1595.netlify.app/"},
+            {name:"Integrator",image:"../../public/assets/integrator.jpg",github:'https://github.com/mohammmedsinan/Integrator',live:"https://integrator-project.netlify.app/"},
+            {name:"Dashboard",image:"../../public/assets/dashboard.jpg",github:'https://github.com/mohammmedsinan/Sulation-For-Redux-Complexity-/tree/polished',live:"https://dashboard-react-2.netlify.app/"},
+            {name:"Antd",image:"../../public/assets/antd.jpg",github:'https://github.com/mohammmedsinan/SRC-Code-ANTD-',live:"https://monumental-boba-49323c.netlify.app/"},
+            {name:"Greener",image:"../../public/assets/greener.jpg",github:'https://github.com/mohammmedsinan/Re-Build-Website',live:"https://euphonious-zuccutto-7e305e.netlify.app/"},
+            {name:"Purple",image:"../../public/assets/purbple.jpg",github:'https://github.com/mohammmedsinan/Re-Build-Website-2',live:"https://wonderful-creponne-1c1595.netlify.app/"},
+            {name:"Portfolio",image:"../../public/assets/portfolio.jpg",github:'https://github.com/mohammmedsinan/Re-Build-Website',live:"https://majestic-jalebi-06c8e2.netlify.app/"},
         ]
   },
   skill: {
