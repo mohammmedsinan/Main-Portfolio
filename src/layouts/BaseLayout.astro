@@ -1,10 +1,12 @@
 ---
 import "../config/Home.css";
 import { ViewTransitions } from "astro:transitions";
+import '@fontsource/pitagon-serif';
+
 
 // ================== Wigets =====================
 import { data } from "@data";
-const { PrimaryColor, secondaryColor } = data.data.colorPallet;
+const { PrimaryColor, secondaryColor,Accent } = data.data.colorPallet;
 // ================= Astro Props ============
 interface Props {
   lang: string;
@@ -28,12 +30,12 @@ const { title, lang } = Astro.props;
     <meta http-equiv='x-dns-prefetch-control' content='off'>
 
     <!-- =============================================================================== -->
-    <ViewTransitions />
+    <ViewTransitions fallback="swap"/>
     <title>{title}</title>
     <slot name="head" />
   </head>
   <body>
     <slot />
-    <style is:global define:vars={{ PrimaryColor, secondaryColor }}></style>
+    <style is:global define:vars={{ PrimaryColor, secondaryColor ,Accent}}></style>
   </body>
 </html>

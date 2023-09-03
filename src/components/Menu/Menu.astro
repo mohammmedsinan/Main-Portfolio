@@ -4,6 +4,6 @@ const { Navigation } = data.data
 const menuFixed = "fixed bottom-0 -translate-x-[50%] left-[50%] -translate-y-2"
 const {isMenuFixed} = Astro.props
 ---
-<div class=`flex justify-center pb-5 sm:p-0 ${isMenuFixed&&menuFixed}`> {Navigation.map((element => <a href={element.link} class="text-primary font-semibold bg-secondary p-5 rounded-full min-w-[75px] min-h-[75px] flex justify-center items-center mx-1 hover:scale-110 hover:-translate-y-5 transition-all element-box-shadow" ><div>{element.name}</div></a>))} </div>
+<div class=`flex justify-center pb-5 sm:p-0 ${isMenuFixed&&menuFixed}`> {Navigation.map((element => <a href={element.link} class="text-primary font-semibold bg-secondary p-5 rounded-full min-w-[75px] min-h-[75px] flex justify-center items-center mx-1 hover:scale-110 hover:-translate-y-5 transition-all element-box-shadow border border-primary" ><div>{element.name}</div></a>))} </div>
 
-<style>.element-box-shadow:hover{box-shadow:0px 1px 21px -2px var(--secondaryColor);}</style>
+<style>.element-box-shadow:hover{box-shadow:0px 0px 51px -2px var(--secondaryColor);}</style>

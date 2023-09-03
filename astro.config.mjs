@@ -15,7 +15,7 @@ export default defineConfig({
     //React Integration
     react(),
     //TailWind Integration
-    tailwind({applyBaseStyles:false}),
+    tailwind({applyBaseStyles:true}),
     //Image Integration
     image(),
     //Mdx Integration

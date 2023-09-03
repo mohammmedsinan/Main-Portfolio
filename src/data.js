@@ -2,9 +2,9 @@ export let data = {
   data: {
     SEO: {},
     colorPallet: {
-      PrimaryColor: "#040D12",
-      secondaryColor: "#93B1A6",
-      Accent: "#FFFFFF",
+      PrimaryColor: "#000502",
+      secondaryColor: "#765898",
+      Accent: "#e6770b",
     },
     Navigation: [
       { id: 1, name: "Home", link: "/" },

@@ -7,12 +7,12 @@ module.exports = {
       colors: {
         primary: 'var(--PrimaryColor)',
         secondary: 'var(--secondaryColor)',
-        accent: 'var(--aw-color-accent)',
+        accent: 'var(--Accent)',
       },
       fontFamily: {
-        sans: ["sans-serif", ...defaultTheme.fontFamily.sans],
-        serif: ["sans-serif", ...defaultTheme.fontFamily.serif],
-        heading: ["sans-serif", ...defaultTheme.fontFamily.sans],
+        sans: ["Pitagon Serif", ...defaultTheme.fontFamily.sans],
+        serif: ["Pitagon Serif", ...defaultTheme.fontFamily.serif],
+        heading: ["Pitagon Serif", ...defaultTheme.fontFamily.sans],
       },
     },
   },

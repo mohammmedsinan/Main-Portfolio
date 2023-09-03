@@ -7,3 +7,4 @@
   .btn-primary { @apply text-primary bg-secondary md:px-10 md:py-2 px-6 py-2 rounded-3xl font-bold md:text-lg text-sm transition-all hover:shadow-lg hover:scale-105}
   .btn-secondary { @apply text-secondary bg-primary border border-secondary  md:px-10 md:py-2 px-6 py-2 rounded-3xl font-bold md:text-lg text-sm transition-all hover:shadow-lg hover:scale-105 }
 }
+

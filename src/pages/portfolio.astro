@@ -4,10 +4,10 @@ import {data} from '@data';
 const {work} = data.portfolio;
 ---
 
-<Layout lang='en' title='protofolio' isMenuFixed>
+<Layout lang='en' title='protofolio' isMenuFixed DisplaySafe>
 <div class="w-full h-full flex flex-wrap justify-around md:px-40 px-0">
     {work.map(element => {
-        return(<div class={`bg-primary border-primary border-2 hover:border-secondary md:w-[30vw] md:h-[15vw] w-[90vw] h-[40vw] rounded-xl card-portfolio group py-3 my-6 md:my-0`} style={`background-image: url(${element.image})`}><div class="flex justify-center items-center opacity-0 group-hover:opacity-100 flex-col "><h1 class="md:text-3xl text-2lg text-secondary font-medium">{element.name}</h1><div class="flex justify-around w-full mt-[20%]"><a class="btn-primary" href={element.live}>Live</a><a class="btn-secondary" href={element.github}>Source</a></div></div></div>)
+        return(<div class={`bg-primary border-primary border-2 hover:border-secondary md:w-[30vw] md:h-[15vw] w-[90vw] h-[40vw] rounded-xl card-portfolio group py-3 my-6 md:my-10`} style={`background-image: url(${element.image})`}><div class="flex justify-center items-center opacity-0 group-hover:opacity-100 flex-col "><h1 class="md:text-3xl text-2lg text-secondary font-medium">{element.name}</h1><div class="flex justify-around w-full mt-[20%]"><a class="btn-primary" href={element.live}>Live</a><a class="btn-secondary" href={element.github}>Source</a></div></div></div>)
     })}
 </div>
 </Layout>
