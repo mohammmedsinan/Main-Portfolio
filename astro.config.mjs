@@ -8,6 +8,11 @@ import image from '@astrojs/image';
 
 
 export default defineConfig({
+   vite: {
+    ssr: {
+      external: ['svgo']
+    }
+  },
   experimental: {
     viewTransitions: true
    },
