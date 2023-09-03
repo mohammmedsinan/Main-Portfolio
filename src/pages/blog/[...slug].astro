@@ -23,6 +23,7 @@ export async function getStaticPaths() {
     ]),
   ];
 }
+//
 const { slug } = Astro.params;
 const { title } = Astro.props;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
