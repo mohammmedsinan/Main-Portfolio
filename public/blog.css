@@ -1,0 +1,12 @@
+:root{
+    --primary: #000502;
+    --secondary:#765898;
+    --accent:#e6770b;
+}
+
+.blog-title{
+    font-size:calc(20px + 2vw);
+
+}
+
+span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondary);}
