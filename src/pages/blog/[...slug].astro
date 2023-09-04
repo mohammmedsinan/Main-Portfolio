@@ -42,7 +42,7 @@ const { html: postHTML } = await fetch(
   .catch();
 ---
 <Layout lang='en' title={title}>
-  <Fragment set:html={postHTML} transition:name="hero" />
+  <Fragment set:html={postHTML} />
 </Layout>
 
 <style is:global>span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondaryColor);font-size:24px !important;}</style>

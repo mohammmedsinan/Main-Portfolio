@@ -1,4 +1,4 @@
-export let data = {
+export const data = {
   data: {
     SEO: {},
     colorPallet: {
