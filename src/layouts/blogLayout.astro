@@ -1,7 +1,49 @@
 ---
-import Layout from "./BaseLayout.astro";
+export interface Props {
+  title: string;
+  lang: string;
+}
+import { Icon } from "astro-icon";
+const { title, lang } = Astro.props;
+// ================== Wigets =====================
+import { data } from "@data";
+const { PrimaryColor, secondaryColor,Accent } = data.data.colorPallet;
 ---
 
-<Layout title={"title"} lang={"en"}>
-    <span>safsadf</span>
-</Layout>
+
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Mohammed Sinan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+    <meta http-equiv='x-dns-prefetch-control' content='off'>
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
+        <div
+    class="md:w-[50vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
+          <div class="w-full h-10 bg-secondary border-secondary border flex items-center md:px-6 justify-between">
+            <a href="/blog" class="w-full"><Icon
+                name="ph:arrow-fat-left-fill"
+                class="text-primary max-w-[30px]"/></a>
+            <div class="text-primary font-bold w-full mr-16 md:text-lg">
+              {title}
+            </div>
+            <div class="text-primary">2020/09/22</div>
+          </div>
+          <div class="md:px-7 px-3"><slot /></div>
+        </div>
+      </div>
+    <style is:global define:vars={{ PrimaryColor, secondaryColor ,Accent}}></style>
+  </body>
+</html>
