@@ -30,7 +30,7 @@ const { title, lang } = Astro.props;
     <meta http-equiv='x-dns-prefetch-control' content='off'>
 
     <!-- =============================================================================== -->
-    <ViewTransitions fallback="swap"/>
+    <ViewTransitions />
     <title>{title}</title>
     <slot name="head" />
   </head>
