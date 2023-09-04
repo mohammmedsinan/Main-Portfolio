@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/BlogLayout.astro'
-import { Icon } from 'astro-icon';
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;

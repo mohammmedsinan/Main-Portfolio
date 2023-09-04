@@ -1,17 +1,59 @@
 ---
-import Layout from "./BaseLayout.astro";
 import { Icon } from 'astro-icon';
+import "../config/Home.css";
+import { ViewTransitions } from "astro:transitions";
+import '@fontsource/pitagon-serif';
+
+
+// ================== Wigets =====================
+import { data } from "@data";
+const { PrimaryColor, secondaryColor,Accent } = data.data.colorPallet;
+// ================= Astro Props ============
+interface Props {
+  lang: string;
+  title: string;
+}
 const { title, lang } = Astro.props;
 ---
 
-<Layout title={title} lang={lang}>
-    <div class=`bg-primary min-h-[100vh] max-w-[100vw] overflow-x-hidden`>
-      <div class="flex justify-between mx-7 mt-7">
-        <div class="border-t-[10px] border-l-[10px] h-[200px] w-[250px] border-secondary rounded-2xl hidden sm:block " /> 
-        <div class="border-t-[10px] border-r-[10px] h-[200px] w-[250px] border-secondary rounded-2xl hidden sm:block " /> 
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Mohammed Sinan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='Expires' content='0'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Cache-Control' content='no-cache'>
+    <meta http-equiv='imagetoolbar' content='no'>
+    <meta http-equiv='x-dns-prefetch-control' content='off'>
+
+    <!-- =============================================================================== -->
+    <ViewTransitions />
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
+      <div class="md:w-[50vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
+        <div class="w-full h-10 bg-secondary border-secondary border flex items-center md:px-6 justify-between">
+          <a href="/blog" class="w-full"><Icon
+              name="ph:arrow-fat-left-fill"
+              class="text-primary max-w-[30px]"/></a>
+          <div class="text-primary font-bold w-full mr-16 md:text-lg">
+            {title}
+          </div>
+          <div class="text-primary">2020/09/22</div>
+        </div>
+        <div class="md:px-7 px-3">
+          <slot />
       </div>
-      <slot />
-      <div class="py-5"/> 
+      </div>
     </div>
-  </Layout>
-  
+    <style is:global define:vars={{ PrimaryColor, secondaryColor ,Accent}}>
+    span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondaryColor);font-size:24px !important;}
+    </style>
+  </body>
+</html>
