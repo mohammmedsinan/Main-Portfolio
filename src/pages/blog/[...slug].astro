@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/BaseLayout.astro'
+import { Icon } from 'astro-icon';
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
@@ -17,6 +18,11 @@ const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${bui
 <Layout lang='en' title={title}>
   <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
     <div class="md:w-[50vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
+      <div class="w-full h-10 bg-secondary border-secondary border flex items-center md:px-6 justify-between">
+        <a href="/blog" class="w-full"><Icon
+            name="ph:arrow-fat-left-fill"
+            class="text-primary max-w-[30px]"/></a>
+        <div class="text-primary font-bold w-full mr-16 md:text-lg">
           {title}
         </div>
         <div class="text-primary">2020/09/22</div>
