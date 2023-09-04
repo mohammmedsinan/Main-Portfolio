@@ -11,7 +11,7 @@ const {title,lang} = Astro.props
     <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
         <div class="md:w-[50vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
             <div class="w-full h-10 bg-secondary border-secondary border  flex items-center md:px-6 justify-between"><a href="/blog" class="w-full"><Icon name="ph:arrow-fat-left-fill" class="text-primary max-w-[30px]" /></a><div class="text-primary font-bold w-full mr-16 md:text-lg">{title}</div> <div class="text-primary">2020/09/22</div></div>
-            <div class="md:px-7 px-3"><slot class="text-secondary"/></div>
+            <div class="md:px-7 px-3"><slot /></div>
         </div>  
     </div>
 </Layout>
