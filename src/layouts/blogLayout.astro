@@ -5,6 +5,6 @@ const { title, lang } = Astro.props;
 ---
 
 <Layout title={"title"} lang={"en"}>
- 
+    <style slot="head" is:global>span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondaryColor);font-size:24px !important;}</style>
         <slot />
 </Layout>
