@@ -15,7 +15,6 @@ const encodedUrl = encodeURIComponent("moot");
 const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams({  apiKey: builderAPIpublicKey,  url: encodedUrl,  "query.data.slug": slug,  cachebust: "true",}).toString()}`) .then((res) => res.json()) .catch();
 ---
 <Layout lang='en' title={title}>
-  <Fragment set:html={postHTML} />
 </Layout>
 
 <style is:global>span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondaryColor);font-size:24px !important;}</style>
