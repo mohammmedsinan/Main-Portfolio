@@ -14,8 +14,7 @@ const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 // Builder's API requires this field but for this use case the url doesn't seem to matter - the API returns the same HTML
 const encodedUrl = encodeURIComponent("moot");
 const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams({  apiKey: builderAPIpublicKey,  url: encodedUrl,  "query.data.slug": slug,  cachebust: "true",}).toString()}`) .then((res) => res.json()) .catch();
-const DEV = postHTML;
-console.log(DEV)
+
 ---
 <Layout lang='en' title={title}>
   <!-- <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
@@ -30,7 +29,7 @@ console.log(DEV)
         <div class="text-primary">2020/09/22</div>
       </div>
       <div class="md:px-7 px-3"> -->
-       <DEV />
+        <postHTML />
       <!-- </div>
     </div>
   </div> -->
