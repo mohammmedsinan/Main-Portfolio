@@ -8,9 +8,9 @@ import image from '@astrojs/image';
 
 
 export default defineConfig({
-  experimental: {
-    viewTransitions: true
-   },
+  // experimental: {
+  //   viewTransitions: true
+  //  },
   integrations: [
     //React Integration
     react(),
