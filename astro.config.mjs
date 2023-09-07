@@ -4,7 +4,6 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import mdx from '@astrojs/mdx';
-// import image from '@astrojs/image';
 
 
 export default defineConfig({
@@ -14,8 +13,7 @@ export default defineConfig({
   integrations: [
     react(),
     tailwind({applyBaseStyles:true}),
-    // image(),
-    mdx()
+      mdx()
   ],
   server: ({ command }) => ({ port: command === 'dev' ? 3000 : 3000 })
 });
