@@ -27,9 +27,9 @@ const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${bui
           {title}
         </div>
       </div>
-      <div class="md:px-7 px-3">
+      <div class="md:px-7">
         <div class="flex justify-center">
-          {table&&<div id="main" class="w-full border border-secondary my-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Table of Content</h1></div>}
+          {table&&<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Table of Content</h1></div>}
         </div>
         <div>
           <Fragment set:html={postHTML} />
