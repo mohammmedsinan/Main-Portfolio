@@ -5,7 +5,7 @@ export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
   const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields: ["data.slug", "data.title","data.table"].join(","), cachebust: "true",}).toString()}`).then((res) => res.json()).catch();
-  return [...posts.map(({ data: { slug, title,table } }) => [ { params: { slug }, props: { title,table }}])];
+  return [...posts.flatMap(({ data: { slug, title,table } }) => [ { params: { slug }, props: { title,table }}])];
 }
 const { slug } = Astro.params;
 const { title,table } = Astro.props;
@@ -31,7 +31,9 @@ const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${bui
         <div class="flex justify-center">
           {table&&<div id="main" class="w-full border border-secondary my-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Table of Content</h1></div>}
         </div>
-        <Fragment set:html={postHTML} />
+        <div>
+          <Fragment set:html={postHTML} />
+        </div>
       </div>
     </div>
   </div>

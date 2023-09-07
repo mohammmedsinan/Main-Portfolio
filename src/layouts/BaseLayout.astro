@@ -34,7 +34,7 @@ const { title, lang } = Astro.props;
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body>
+  <body transition:animate="none">
     <slot />
     <style is:global define:vars={{ PrimaryColor, secondaryColor ,Accent}}></style>
   </body>
