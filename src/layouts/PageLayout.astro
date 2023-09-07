@@ -2,6 +2,7 @@
 import Layout from './BaseLayout.astro'
 import Menu from "../components/Menu/Menu.astro";
 // ===================Astro Props ==============================
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   lang: string;
@@ -11,6 +12,7 @@ interface Props {
 const { title, isMenuFixed,lang,DisplaySafe } = Astro.props;
 ---
 <Layout title={title} lang={lang}>
+  <ViewTransitions slot='head'/>
   <div class=`bg-primary min-h-[100vh] max-w-[100vw] overflow-x-hidden ${DisplaySafe&&"pb-36"}`>
     <div class="flex justify-between mx-7 mt-7">
       <div class="border-t-[10px] border-l-[10px] h-[200px] w-[250px] border-secondary rounded-2xl hidden sm:block " /> 

@@ -1,6 +1,5 @@
 ---
 import "../config/Home.css";
-import { ViewTransitions } from "astro:transitions";
 import '@fontsource/pitagon-serif';
 
 
@@ -28,13 +27,10 @@ const { title, lang } = Astro.props;
     <meta http-equiv='Cache-Control' content='no-cache'>
     <meta http-equiv='imagetoolbar' content='no'>
     <meta http-equiv='x-dns-prefetch-control' content='off'>
-
-    <!-- =============================================================================== -->
-    <ViewTransitions />
     <title>{title}</title>
     <slot name="head" />
   </head>
-  <body transition:animate="none">
+  <body>
     <slot />
     <style is:global define:vars={{ PrimaryColor, secondaryColor ,Accent}}></style>
   </body>
