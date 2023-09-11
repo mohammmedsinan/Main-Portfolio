@@ -4,11 +4,12 @@ import { Icon } from 'astro-icon';
 export async function getStaticPaths() {
   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
-  const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields: ["data.slug", "data.title","data.table"].join(","), cachebust: "true",}).toString()}`).then((res) => res.json()).catch();
-  return [...posts.flatMap(({ data: { slug, title,table } }) => [ { params: { slug }, props: { title,table }}])];
+  const dataRequestedFromBuilder =  ["data.slug", "data.title","data.table","data.image"]
+  const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields:dataRequestedFromBuilder.join(","), cachebust: "true",}).toString()}`).then((res) => res.json()).catch();
+  return [...posts.flatMap(({ data: { slug, title,table,image } }) => [ { params: { slug }, props: { title,table,image}}])];
 }
 const { slug } = Astro.params;
-const { title,table } = Astro.props;
+const { title,table ,image} = Astro.props;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 // Builder's API requires this field but for this use case the url doesn't seem to matter - the API returns the same HTML
@@ -37,6 +38,7 @@ const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${bui
           {title}
         </div>
       </div>
+      {image&&<img src={image} alt="Hero Image fro the Blog" class="px-5 mt-2 rounded-3xl"/>}
       <div class="md:px-7">
         <div class="flex justify-center">
           {table&&<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Chapter Navigator</h1></div>}
