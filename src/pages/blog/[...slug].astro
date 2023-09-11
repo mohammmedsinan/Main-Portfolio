@@ -14,12 +14,22 @@ const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 // Builder's API requires this field but for this use case the url doesn't seem to matter - the API returns the same HTML
 const encodedUrl = encodeURIComponent("moot");
 const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${builderModel}?${new URLSearchParams({  apiKey: builderAPIpublicKey,  url: encodedUrl,  "query.data.slug": slug,  cachebust: "true",}).toString()}`) .then((res) => res.json()) .catch();
+//==================Local Render MDX files==================================
+// import { getCollection } from 'astro:content';
+// export async function getStaticPaths() {
+//   const blogEntries = await getCollection('posts');
+//   return blogEntries.map(entry => ({
+//     params: { slug: entry.slug }, props: { entry },
+//   }));
+// }
+// const { entry } = Astro.props;
+// const { Content } = await entry.render();
 ---
 <Layout lang='en' title={title}>
   <link slot="head" rel="stylesheet" href="/blog.css">
   <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
     <div class="lg:w-[50vw] md:w-[70vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
-      <div class="w-full h-10 bg-secondary border-secondary border flex items-center md:px-6 justify-between">
+      <div class="w-full h-10 bg-secondary border-secondary border flex items-center px-6  md:justify-between">
         <a href="/blog" class="w-full"><Icon
             name="ph:arrow-fat-left-fill"
             class="text-primary max-w-[30px]"/></a>
@@ -29,10 +39,10 @@ const { html: postHTML } = await fetch(`https://cdn.builder.io/api/v1/qwik/${bui
       </div>
       <div class="md:px-7">
         <div class="flex justify-center">
-          {table&&<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Table of Content</h1></div>}
+          {table&&<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Chapter Navigator</h1></div>}
         </div>
         <div>
-          <Fragment set:html={postHTML} />
+          <Fragment set:html={postHTML} transition:name={`img-${title}`}/>
         </div>
       </div>
     </div>

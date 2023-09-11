@@ -9,4 +9,5 @@
 
 }
 
-span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondary);}
+span ,strong, em, h1, h2, h3, h4, h5, h6, p {color: var(--secondary); font-size:calc(20px + 0.3vw);}
+img { border-radius: 2rem; }

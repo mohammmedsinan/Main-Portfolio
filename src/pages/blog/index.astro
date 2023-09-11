@@ -1,16 +1,20 @@
 ---
 import Layout from '../../layouts/PageLayout.astro'
+import { getCollection, getEntry } from 'astro:content';
 import {data} from '@data'
 const {title} = data.blog
 // ===========================================================================
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
 const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields: ["data.slug", "data.title","data.image"].join(","), cachebust: "true", }).toString()}`).then((res) => res.json()).catch();
+
+const allBlogPosts = await getCollection('posts');
+const AllBlogPosts = [...allBlogPosts]
 ---
 
 <Layout title={title} isMenuFixed lang='en'>
-<div class="flex px-0 lg:px-28 flex-wrap justify-center items-center" >
-{posts.map(({ data: { slug, title,image } }) => (
+<div class="flex px-0 lg:px-28 flex-wrap justify-center items-center">
+{posts?.map(({ data: { slug, title,image } }) => (
 <a href={`/blog/${slug}`} class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
   <img src=`${image?image:"https://placehold.co/600x400"}` alt="https://placehold.co/600x400" class="rounded-lg">
   <h1 class="text-xl py-1 text-secondary font-bold group-hover:text-primary sametranstion">{title}</h1>
@@ -19,6 +23,18 @@ const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${
   // post.slug.includes('ar')&&<a href={`/blog/${post.slug}`}>{post.data.title}</a>
 )
 )}
+
+<!-- ==============Local Render MDX FIles =========================== -->
+<!-- {AllBlogPosts?.map(({ slug, title }) => (
+<a href={`/blog/${slug}`} class="border rounded-2xl m-4 p-4 max-w-[300px] flex flex-col group hover:border-secondary hover:bg-secondary sametranstion">
+  <div class="rounded-lg w-full h-[200px] bg-secondary" />
+  <h1 class="text-xl py-1 text-secondary font-bold group-hover:text-primary sametranstion">{title}</h1>
+  <p class="text-xs text-gray-200 group-hover:text-primary sametranstion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dignissimos cumque sequi consectetur unde alias sapiente omnis quasi in minima!</p>
+</a>
+)
+)} -->
+
+
 </div>
 </Layout>
 
