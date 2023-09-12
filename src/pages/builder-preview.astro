@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro";
-const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+import {Icon} from 'astro-icon';
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
-import {Icon} from 'astro-icon'
+const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 ---
 
 <BaseLayout lang='en' title={"title"}>
@@ -20,7 +20,8 @@ import {Icon} from 'astro-icon'
           {<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Chapter Navigator</h1></div>}
         </div>
         <div>
-          <builder-component model={builderModel} api-key={builderAPIpublicKey}></builder-component> <script async src="https://cdn.builder.io/js/webcomponents"></script>
+          <builder-component model={builderModel} api-key={builderAPIpublicKey}></builder-component>
+           <script async src="https://cdn.builder.io/js/webcomponents"></script>
         </div>
       </div>
     </div>
@@ -38,13 +39,8 @@ import {Icon} from 'astro-icon'
       AnotherList.classList.add(`text-secondary`);
       AnotherList.classList.add(`block`);
       AnotherList.appendChild(document.createTextNode(" - " + content));
-      AnotherList.href=`#${id}`
+      AnotherList.href=`#${id}`;
       document.querySelector('#main').appendChild(AnotherList);
     }
   </script>
 </BaseLayout>
-
-
-
-
-
