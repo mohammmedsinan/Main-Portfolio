@@ -1,19 +1,50 @@
 ---
+import BaseLayout from "src/layouts/BaseLayout.astro";
 const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+import {Icon} from 'astro-icon'
 ---
 
-<html lang="en">
-  <head>
-    <title>Preview for builder.io</title>
-  </head>
-  <body>
-    <header>This is your header</header>
+<BaseLayout lang='en' title={"title"}>
+  <link slot="head" rel="stylesheet" href="/blog.css">
+  <div class=`w-full flex justify-center bg-primary min-h-[100vh] md:pt-5`>
+    <div class="lg:w-[50vw] md:w-[70vw] bg-primary border border-secondary border-b-0 rounded-b-none md:rounded-lg">
+      <div class="w-full h-10 bg-secondary border-secondary border flex items-center px-6  md:justify-between">
+        <a href="/blog" class="w-full"><Icon
+            name="ph:arrow-fat-left-fill"
+            class="text-primary max-w-[30px]"/></a>
+        <div class="text-primary font-bold w-full text-end md:text-lg">Test Title</div>
+      </div>
+      <div class="md:px-7">
+        <div class="flex justify-center">
+          {<div id="main" class="w-full border border-secondary m-5 rounded-md p-3 md:w-[20vw]" ><h1 class="pb-3 text-center">Chapter Navigator</h1></div>}
+        </div>
+        <div>
+          <builder-component model={builderModel} api-key={builderAPIpublicKey}></builder-component> <script async src="https://cdn.builder.io/js/webcomponents"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const TableImporter = document.getElementsByClassName('table');
+    const Tablebox = document.createElement("div");
+    Tablebox.classList.add("h-40");
+    Tablebox.appendChild(document.createTextNode("This is new."));
+    for (let index = 0; index < TableImporter.length; index++) {
+      const ContentTable = TableImporter[index];
+      const id = ContentTable.id;
+      const content = ContentTable.innerText;
+      const AnotherList = document.createElement("a");
+      AnotherList.classList.add(`text-secondary`);
+      AnotherList.classList.add(`block`);
+      AnotherList.appendChild(document.createTextNode(" - " + content));
+      AnotherList.href=`#${id}`
+      document.querySelector('#main').appendChild(AnotherList);
+    }
+  </script>
+</BaseLayout>
 
-    <builder-component model={builderModel} api-key={builderAPIpublicKey}
-    ></builder-component>
-    <script async src="https://cdn.builder.io/js/webcomponents"></script>
 
-    <footer>This is your footer</footer>
-  </body>
-</html>
+
+
+
