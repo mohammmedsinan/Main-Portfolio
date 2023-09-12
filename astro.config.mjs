@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import netlify from '@astrojs/netlify/functions';
 
 // ======================Astro Plugins ============================
 import react from "@astrojs/react";
@@ -7,9 +8,8 @@ import mdx from '@astrojs/mdx';
 
 
 export default defineConfig({
-  // experimental: {
-  //   viewTransitions: true
-  //  },
+  output: 'server',
+  adapter: netlify(),
   integrations: [
     react(),
     tailwind({applyBaseStyles:true}),

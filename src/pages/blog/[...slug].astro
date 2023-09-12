@@ -1,13 +1,13 @@
 ---
 import Layout from '../../layouts/BaseLayout.astro'
 import { Icon } from 'astro-icon';
-export async function getStaticPaths() {
-  const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
-  const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
-  const dataRequestedFromBuilder =  ["data.slug", "data.title","data.table","data.image"]
-  const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields:dataRequestedFromBuilder.join(","), cachebust: "true",}).toString()}`).then((res) => res.json()).catch();
-  return [...posts.flatMap(({ data: { slug, title,table,image } }) => [ { params: { slug }, props: { title,table,image}}])];
-}
+// export async function getStaticPaths() {
+//   const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
+//   const builderAPIpublicKey = import.meta.env.BUILDER_API_PUBLIC_KEY;
+//   const dataRequestedFromBuilder =  ["data.slug", "data.title","data.table","data.image"]
+//   const { results: posts } = await fetch(`https://cdn.builder.io/api/v3/content/${builderModel}?${new URLSearchParams({ apiKey: builderAPIpublicKey, fields:dataRequestedFromBuilder.join(","), cachebust: "true",}).toString()}`).then((res) => res.json()).catch();
+//   return [...posts.flatMap(({ data: { slug, title,table,image } }) => [ { params: { slug }, props: { title,table,image}}])];
+// }
 const { slug } = Astro.params;
 const { title,table ,image} = Astro.props;
 const builderModel = import.meta.env.BUILDER_BLOGPOST_MODEL;
