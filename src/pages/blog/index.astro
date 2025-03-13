@@ -9,7 +9,8 @@ const posts = await Astro.glob('./*.md');
 <Layout title="Blog">
     <div id="blog-container-outside">
         <div id="wrapper">
-            {posts.map(MDfile => {
+
+            {/*posts.map(MDfile => {
                 return(
                     <a href={`https://mohammed-sinan.netlify.app${MDfile.url}`}>
                 <div class="blog-card">
@@ -26,7 +27,7 @@ const posts = await Astro.glob('./*.md');
             </div>
         </a>
                 )
-            })}
+            })*/}
         </div>
     </div>
 </Layout>
